@@ -148,10 +148,11 @@ class Connect4Game:
                 
 class Connect4Console:
     
-    def __init__(self,game):
+    def __init__(self,game,show_board=True):
         self.game = game
         self.minimax = Minimax(4)
         self.alphabeta = Alphabeta(4)
+        self._show_board = show_board
         self.play()
 
     def play(self):
@@ -185,11 +186,13 @@ class Connect4Console:
 
                 if self.game.winning_move(self.game.current_player):
                     self.game.game_over = True
-                    self.game.print_board()
+                    if self._show_board:
+                        self.game.print_board()
                     print("Player " + str(self.game.current_player) + " wins!")
                 else:
                     self.game.current_player = PLAYER2_PIECE if self.game.current_player == PLAYER1_PIECE else PLAYER1_PIECE
-                    self.game.print_board()
+                    if self._show_board:
+                        self.game.print_board()
 
 class Connect4Viewer:
     

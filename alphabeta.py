@@ -92,10 +92,10 @@ class Alphabeta:
 
 
     def get_valid_moves(self, board):
-        #return [col for col in range(COLUMN_COUNT) if board[ROW_COUNT-1][col] == 0]
-        valid_moves = []
+        return [col for col in range(COLUMN_COUNT) if board[ROW_COUNT-1][col] == 0]
+        """valid_moves = []
         if(board[ROW_COUNT-1][0] == 0):
-            valid_moves.append(0)
+            valid_moves.append(0)"""
         
 
     def make_move(self, board, move, player):

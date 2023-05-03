@@ -10,7 +10,7 @@ def main():
     if choix == 2:
         viewer = Connect4Viewer(game)
     else:
-        console = Connect4Console(game)
+        console = Connect4Console(game , show_board = False)
         console.play()
         
 
