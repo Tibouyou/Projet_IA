@@ -188,11 +188,12 @@ class Connect4Console:
                     self.game.game_over = True
                     if self._show_board:
                         self.game.print_board()
-                    print("Player " + str(self.game.current_player) + " wins!")
+                        print("Player " + str(self.game.current_player) + " wins!")
                 else:
                     self.game.current_player = PLAYER2_PIECE if self.game.current_player == PLAYER1_PIECE else PLAYER1_PIECE
                     if self._show_board:
                         self.game.print_board()
+        return self.game.current_player
 
 class Connect4Viewer:
     
