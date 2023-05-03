@@ -1,97 +1,142 @@
-import random
 import math
-
-class MonteCarlo:
-    
-    def __init__(self, game, simulations_per_turn):
-        self.game = game
-        self.simulations_per_turn = simulations_per_turn
-
-    def monte_carlo_tree_search(self, root_state, exploration_parameter):
-        root_node = Node(state=root_state)
-        for i in range(self.simulations_per_turn):
-            node = root_node
-            state = root_state.clone()
-
-            # Selection
-            while not node.is_terminal() and node.is_fully_expanded():
-                node = self.select_child(node, exploration_parameter)
-                action = node.parent_action
-                state.do_move(action)
-
-            # Expansion
-            if not node.is_terminal():
-                unexplored_actions = state.get_legal_moves()
-                action = random.choice(unexplored_actions)
-                state.do_move(action)
-                node = node.add_child(action, state)
-
-            # Simulation
-            winner = self.simulate(state)
-
-            # Backpropagation
-            while node is not None:
-                node.update(winner)
-                node = node.parent
-
-        # Choose the best action
-        best_child = root_node.get_best_child()
-        return best_child.parent_action
-
-    def select_child(self, node, exploration_parameter):
-        # Use the UCB1 formula to select a child node
-        log_n = math.log(node.visit_count)
-        child_scores = [
-            (child.wins / child.visit_count) + exploration_parameter * math.sqrt(log_n / child.visit_count)
-            for child in node.children
-        ]
-        return node.children[child_scores.index(max(child_scores))]
-
-    def simulate(self, state):
-        # Simulate a random game from the current state
-        current_player = state.current_player
-        while not state.is_terminal():
-            legal_moves = state.get_legal_moves()
-            move = random.choice(legal_moves)
-            state.do_move(move)
-        winner = state.get_winner()
-        if winner is None:
-            return 0
-        elif winner == current_player:
-            return 1
-        else:
-            return -1
+import random
+from const import *
 
 
 class Node:
-
-    def __init__(self, parent=None, parent_action=None, state=None):
-        self.parent = parent
-        self.parent_action = parent_action
-        self.children = []
+    def __init__(self, state, parent=None):
         self.state = state
-        self.wins = 0
-        self.visit_count = 0
+        self.parent = parent
+        self.children = []
+        self.visits = 0
+        self.score = 0
 
-    def add_child(self, action, state):
-        # Add a new child node
-        child = Node(parent=self, parent_action=action, state=state)
+    def add_child(self, child_state):
+        child = Node(child_state, self)
         self.children.append(child)
         return child
 
-    def is_fully_expanded(self):
-        # Check if all possible child states are already explored
+    def update(self, score):
+        self.score += score
+        self.visits += 1
+
+    def fully_expanded(self):
         return len(self.children) == len(self.state.get_legal_moves())
 
-    def is_terminal(self):
-        # Check if the current node is a terminal state
-        return self.state.is_terminal()
+    def __repr__(self):
+        return f"{self.score / self.visits if self.visits != 0 else math.inf}, {self.score}, {self.visits}"
 
-    def get_best_child(self):
-        # Get the child node with the highest win rate
-        return max(self.children, key=lambda child: child.wins / child.visit_count)
 
-    def update(self, result):
-        # Update the node's win rate and visit count
-        self.wins += result
-        self.visit_count += 1
+class MonteCarlo:
+    def __init__(self, state):
+        self.root = Node(state)
+
+    def evaluate(self, board, player):
+        print (board[:, 4])
+        score = 0
+        for r in range(ROW_COUNT):
+            row_array = [int(i) for i in list(board[r])]
+            for c in range(COLUMN_COUNT - 3):
+                window = row_array[c : c + 4]
+                score += self.evaluate_window(window, player)
+
+        for c in range(COLUMN_COUNT):
+            col_array = [int(i) for i in list(board[:, c])]
+            for r in range(ROW_COUNT - 3):
+                window = col_array[r : r + 4]
+                score += self.evaluate_window(window, player)        
+
+        for r in range(ROW_COUNT - 3):
+            for c in range(COLUMN_COUNT - 3):
+                window = [board[r + i][c + i] for i in range(4)]
+                score += self.evaluate_window(window, player)
+
+        for r in range(ROW_COUNT - 3):
+            for c in range(COLUMN_COUNT - 3):
+                window = [board[r + 3 - i][c + i] for i in range(4)]
+                score += self.evaluate_window(window, player)        
+      
+        return score
+    
+    def evaluate_window(self, window, piece):
+        """
+        Evaluates the score of a portion of the board
+        :param window: portion of the board with all the pieces that have been placed
+        :param piece: 1 or -1 depending on whose turn it is
+        :return: score of the window
+        """
+        score = 0
+        opp_piece = self.get_opponent(piece)
+        if window.count(piece) == 4:
+            score += 100
+        elif window.count(piece) == 3 and window.count(EMPTY) == 1:
+            score += 5
+        elif window.count(piece) == 2 and window.count(EMPTY) == 2:
+            score += 2
+
+        if window.count(opp_piece) == 3 and window.count(EMPTY) == 1:
+            score -= 4
+
+        return score
+    
+    def get_opponent(self, player):
+        return 3 - player
+
+    def search(self, num_iterations):
+        for i in range(num_iterations):
+            node = self.root
+            state = self.root.state.copy()
+
+            # selection
+            while node.fully_expanded() and node.children:
+                node = self.select_child(node)
+                state.play_move(node.state.last_move)
+                
+            # expansion
+            if not node.fully_expanded():
+                move = random.choice(list(set(state.get_legal_moves()) - set([child.state.last_move for child in node.children])))
+                if isinstance(move, tuple):
+                    col = move[0]
+                else:
+                    col = move
+                state.play_move(col)
+
+
+                node = node.add_child(state)
+
+            # simulation
+            while not state.is_terminal() and state.get_legal_moves() != []:
+                state.play_move(random.choice(state.get_legal_moves()))
+
+            # backpropagation
+            while node is not None:
+                node.update(self.evaluate(state.board, self.root.state.current_player))
+                node = node.parent
+
+    def select_child(self, node):
+        total_visits = sum(child.visits for child in node.children)
+        ucb_scores = [self.ucb_score(child, total_visits) for child in node.children]
+        return node.children[ucb_scores.index(max(ucb_scores))]
+
+    def ucb_score(self, node, parent_visits):
+        exploitation = node.score / node.visits if node.visits != 0 else math.inf
+        exploration = math.sqrt(math.log(parent_visits) / node.visits) if node.visits != 0 else math.inf
+        return exploitation + 2 * exploration
+
+    def best_child(self):
+        children = sorted(self.root.children, key=lambda child: child.visits, reverse=True)
+        return self.select_child(self.root)
+
+
+class MCTS:
+    def __init__(self, player):
+        self.player = player
+
+    def get_move(self, state):
+        mcts = MonteCarlo(state)
+        mcts.search(1000)
+
+        if self.player == 1:
+            return mcts.best_child().state.last_move
+        else:
+            return mcts.best_child().state.last_move - 1

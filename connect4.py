@@ -2,7 +2,7 @@ import numpy as np
 from const import *
 import tkinter as tk
 from minimax import Minimax
-from mcts import MonteCarlo
+from mcts import MCTS
 
 
 class Connect4Game:
@@ -11,13 +11,13 @@ class Connect4Game:
         self.board = [[0 for j in range(COLUMN_COUNT)] for i in range(ROW_COUNT)]
         self.game_over = False
         self.current_player = PLAYER1_PIECE
-        self.print_board()
         self.last_move = 0
         self._player1 = player1
         self._player2 = player2
 
     def drop_piece(self, row, col, piece):
         self.board[row][col] = piece
+        self.last_move = col
 
     def is_valid_location(self, col):
         return self.board[ROW_COUNT-1][col] == EMPTY
@@ -59,7 +59,12 @@ class Connect4Game:
         return self.current_player
 
     def get_legal_moves(self):
-        return [col for col in range(COLUMN_COUNT) if self.is_valid_location(col)]
+        legal_moves = []
+        for col in range(COLUMN_COUNT):
+            if self.is_valid_location(col):
+                legal_moves.append(col)
+        return legal_moves
+
 
     def get_winner(self):
         if self.winning_move(PLAYER1_PIECE):
@@ -78,13 +83,13 @@ class Connect4Game:
             return False
 
         if self.current_player == PLAYER1_PIECE:
-            if col < 0 or col >= COLUMN_COUNT:
+            if not isinstance(col, int) or col < 0 or col >= COLUMN_COUNT:
                 return False
         elif self._player2 == "mcts":
             if col is None:
                 return False
         else:
-            if col < 0 or col >= COLUMN_COUNT:
+            if not isinstance(col, int) or col < 0 or col >= COLUMN_COUNT:
                 return False
 
         if not self.is_valid_location(col):
@@ -99,6 +104,44 @@ class Connect4Game:
         self.current_player = PLAYER2_PIECE if self.current_player == PLAYER1_PIECE else PLAYER1_PIECE
 
         return True
+
+    def is_terminal(self):
+    # Check if the current node is a terminal state
+        board = self.board.copy()
+        # Check for horizontal win
+        for row in range(len(board)):
+            for col in range(len(board[0]) - 3):
+                if board[row][col] != 0 and board[row][col] == board[row][col+1] == board[row][col+2] == board[row][col+3]:
+                    return True
+        # Check for vertical win
+        for row in range(len(board) - 3):
+            for col in range(len(board[0])):
+                if board[row][col] != 0 and board[row][col] == board[row+1][col] == board[row+2][col] == board[row+3][col]:
+                    return True
+        # Check for diagonal win (top left to bottom right)
+        for row in range(len(board) - 3):
+            for col in range(len(board[0]) - 3):
+                if board[row][col] != 0 and board[row][col] == board[row+1][col+1] == board[row+2][col+2] == board[row+3][col+3]:
+                    return True
+        # Check for diagonal win (bottom left to top right)
+        for row in range(3, len(board)):
+            for col in range(len(board[0]) - 3):
+                if board[row][col] != 0 and board[row][col] == board[row-1][col+1] == board[row-2][col+2] == board[row-3][col+3]:
+                    return True
+        # If none of the above conditions are met, the game is not over yet
+        return False
+
+    
+    def copy(self):
+        """
+        Retourne une copie de l'objet.
+        """
+        game = Connect4Game(self._player1, self._player2)
+        game.board = [row[:] for row in self.board]
+        game.game_over = self.game_over
+        game.current_player = self.current_player
+        game.last_move = self.last_move
+        return game
 
                 
 class Connect4Console:
@@ -115,9 +158,9 @@ class Connect4Console:
                 col = int(input("Player 1, enter your column choice (0-6): "))
             else:
                 if (self.game._player2 == "mcts"):
-                    monte_carlo = MonteCarlo(self.game, 1000)
-                    exploration_parameter = 1.4
-                    col = monte_carlo.monte_carlo_tree_search(self.game, exploration_parameter)
+                    print("player 2 = mcts")
+                    mcts = MCTS(1)
+                    col = mcts.get_move(self.game)
                 elif (self.game._player2 == "minimax"):
                     col = self.minimax.get_best_move(self.game.board , self.game.current_player)
                 else:
