@@ -21,12 +21,12 @@ class Minimax:
         #print("")                      #debug pour voir les scores de chaque coup (retour à la ligne)
         return best_move         
 
-    def minimax(self, board, depth, is_maximizing, player):
+    def minimax(self, board, depth, tour_max, player):
         if depth == 0 or self.is_terminal_node(board):
             return self.evaluate(board, player)
 
         valid_moves = self.get_valid_moves(board)
-        if is_maximizing:
+        if tour_max:
             best_score = float('-inf')
             for move in valid_moves:
                 temp_board = deepcopy(board)

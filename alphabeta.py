@@ -37,13 +37,13 @@ class Alphabeta:
 
 
 
-    def alphabeta(self, board, depth, is_maximizing, player, alpha, beta):
+    def alphabeta(self, board, depth, tour_max, player, alpha, beta):
         if depth == 0 or self.is_terminal_node(board):
             return self.evaluate(board, player)
 
         valid_moves = self.get_valid_moves(board)
         
-        if is_maximizing:
+        if tour_max:
             
             best_score = float('-inf')
             
@@ -92,7 +92,11 @@ class Alphabeta:
 
 
     def get_valid_moves(self, board):
-        return [col for col in range(COLUMN_COUNT) if board[ROW_COUNT-1][col] == 0]
+        #return [col for col in range(COLUMN_COUNT) if board[ROW_COUNT-1][col] == 0]
+        valid_moves = []
+        if(board[ROW_COUNT-1][0] == 0):
+            valid_moves.append(0)
+        
 
     def make_move(self, board, move, player):
         row = self.get_next_open_row(board, move)
