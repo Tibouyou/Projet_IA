@@ -65,7 +65,7 @@ class Minimax:
                 score += self.evaluate_window(window, player)
 
         for c in range(COLUMN_COUNT):
-            col_array = [int(i) for i in list(board[:, c])]
+            col_array = [board[i][c] for i in range(ROW_COUNT)]
             for r in range(ROW_COUNT - 3):
                 window = col_array[r : r + 4]
                 score += self.evaluate_window(window, player)        

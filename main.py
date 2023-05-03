@@ -6,7 +6,7 @@ def main():
     
     #choix si interface console ou graphique
     choix = int(input("Voulez-vous jouer en mode console ou graphique ? (1/2) : "))
-    game = Connect4Game("humain","mcts")
+    game = Connect4Game("humain","minimax")
     if choix == 2:
         viewer = Connect4Viewer(game)
     else:
