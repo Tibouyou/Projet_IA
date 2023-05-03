@@ -1,4 +1,4 @@
-#import numpy as np
+import numpy as np
 from const import *
 import tkinter as tk
 from minimax import Minimax
@@ -28,7 +28,7 @@ class Connect4Game:
                 return r
 
     def print_board(self):
-        print(self.board[::-1])
+        print(np.flip(self.board, 0))
 
     def winning_move(self, piece):
         # Check horizontal locations for win

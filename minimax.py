@@ -1,4 +1,4 @@
-#import numpy as np
+import numpy as np
 from const import *
 
 class Minimax:
@@ -10,7 +10,7 @@ class Minimax:
         best_move = None
         best_score = float('-inf')
         for move in valid_moves:
-            temp_board = board.copy()
+            temp_board = np.copy(board)
             self.make_move(temp_board, move, player)
             score = self.minimax(temp_board, self.max_depth, False, player)
             if score > best_score:
@@ -26,7 +26,7 @@ class Minimax:
         if is_maximizing:
             best_score = float('-inf')
             for move in valid_moves:
-                temp_board = board.copy()
+                temp_board = np.copy(board)
                 self.make_move(temp_board, move, player)
                 score = self.minimax(temp_board, depth-1, False, player)
                 best_score = max(score, best_score)
@@ -34,7 +34,7 @@ class Minimax:
         else:
             best_score = float('-inf')
             for move in valid_moves:
-                temp_board = board.copy()
+                temp_board = np.copy(board)
                 self.make_move(temp_board, move, self.get_opponent(player))
                 score = self.minimax(temp_board, depth-1, True, player)
                 best_score = max(score, best_score)
