@@ -1,4 +1,5 @@
-import numpy as np
+#import numpy as np
+from copy import deepcopy
 from const import *
 import tkinter as tk
 from minimax import Minimax
@@ -28,7 +29,7 @@ class Connect4Game:
                 return r
 
     def print_board(self):
-        print(np.flip(self.board, 0))
+        printboard(self.board[::-1])
 
     def winning_move(self, piece):
         # Check horizontal locations for win
@@ -229,3 +230,19 @@ class Connect4Viewer:
     
     def show_message(self, message):
         self.canvas.create_text(WIDTH//2, HEIGHT//2, text=message, fill="white", font=("Arial", 24))
+
+
+
+
+
+
+
+def printboard(board):
+    print("board : ")
+    for i in range(6):
+        for j in range(7):
+            print(board[i][j], end="  ")
+        print("\n")
+
+
+
