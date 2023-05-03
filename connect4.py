@@ -3,8 +3,9 @@ from copy import deepcopy
 from const import *
 import tkinter as tk
 from minimax import Minimax
+from alphabeta import Alphabeta
 from mcts import MCTS
-
+from time import *
 
 class Connect4Game:
 
@@ -150,13 +151,22 @@ class Connect4Console:
     def __init__(self,game):
         self.game = game
         self.minimax = Minimax(4)
+        self.alphabeta = Alphabeta(4)
         self.play()
 
     def play(self):
         while not self.game.game_over:
             if self.game.current_player == PLAYER1_PIECE:
-                print("player 1")
-                col = int(input("Player 1, enter your column choice (0-6): "))
+                if (self.game._player1 == "mcts"):
+                    print("player 1 = mcts")
+                    mcts = MCTS(1)
+                    col = mcts.get_move(self.game)
+                elif (self.game._player1 == "minimax"):
+                    col = self.minimax.get_best_move(self.game.board , self.game.current_player)
+                elif (self.game._player1 == "alphabeta"):
+                    col = self.alphabeta.get_best_move(self.game.board , self.game.current_player)
+                else:
+                    col = int(input("Player 1, enter your column choice (0-6): "))
             else:
                 if (self.game._player2 == "mcts"):
                     print("player 2 = mcts")
@@ -164,6 +174,8 @@ class Connect4Console:
                     col = mcts.get_move(self.game)
                 elif (self.game._player2 == "minimax"):
                     col = self.minimax.get_best_move(self.game.board , self.game.current_player)
+                elif (self.game._player2 == "alphabeta"):
+                    col = self.alphabeta.get_best_move(self.game.board , self.game.current_player)
                 else:
                     col = int(input("Player 2, enter your column choice (0-6): "))
 

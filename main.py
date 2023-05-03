@@ -6,7 +6,7 @@ def main():
     
     #choix si interface console ou graphique
     choix = int(input("Voulez-vous jouer en mode console ou graphique ? (1/2) : "))
-    game = Connect4Game("humain","minimax")
+    game = Connect4Game("minimax","alphabeta")
     if choix == 2:
         viewer = Connect4Viewer(game)
     else:
@@ -19,5 +19,5 @@ if __name__ == '__main__':
 
     """player1 = "human"
     player2 = "mcts"
-    game = Connect4Game(player1, player2)
+    game = Connect4Game(player1, player2)                     alphabeta ou minimax
     console = Connect4Console(game)"""
