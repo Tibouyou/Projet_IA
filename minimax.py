@@ -14,9 +14,11 @@ class Minimax:
             temp_board = deepcopy(board)
             self.make_move(temp_board, move, player)
             score = self.minimax(temp_board, self.max_depth, False, player)
+            #print(score, end="|")       #debug pour voir les scores de chaque coup 
             if score > best_score:
                 best_score = score
                 best_move = move    
+        #print("")                      #debug pour voir les scores de chaque coup (retour à la ligne)
         return best_move         
 
     def minimax(self, board, depth, is_maximizing, player):
@@ -33,12 +35,12 @@ class Minimax:
                 best_score = max(score, best_score)
             return best_score
         else:
-            best_score = float('-inf')
+            best_score = float('+inf')
             for move in valid_moves:
                 temp_board = deepcopy(board)
                 self.make_move(temp_board, move, self.get_opponent(player))
                 score = self.minimax(temp_board, depth-1, True, player)
-                best_score = max(score, best_score)
+                best_score = min(score, best_score)
             return best_score
 
     def get_valid_moves(self, board):

@@ -242,7 +242,7 @@ def printboard(board):
     for i in range(6):
         for j in range(7):
             print(board[i][j], end="  ")
-        print("\n")
+        print("")
 
 
 
