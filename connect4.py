@@ -220,9 +220,26 @@ class Connect4Viewer:
                 y2 = y1 + SQUARE_SIZE
                 self.canvas.create_rectangle(x1, y1, x2, y2, fill="blue")
                 self.canvas.create_oval(x1, y1, x2, y2, fill="white")
-                  
+                
         self.canvas.bind("<Button-1>", self.on_click)
+        self.update()
         
+    def update(self):
+        liste_IA = ["minimax", "alphabeta", "mcts"]
+        if self.game.current_player == 1:
+            type_player = self.game._player1_type
+        else:
+            type_player = self.game._player2_type
+        
+        if not self.game.game_over:
+            if type_player in liste_IA:
+                # Current player is a bot, use AI to determine next move
+                col = self.get_ai_move(type_player, self.game.current_player)
+                self.root.after(500, lambda: self.play_ai_move(col))
+        
+        self.root.after(50, self.update)
+
+
     def on_click(self, event):
         liste_IA = ["minimax", "alphabeta", "mcts"]
         if self.game.current_player == 1:
@@ -231,11 +248,7 @@ class Connect4Viewer:
             type_player = self.game._player2_type
 
         if not self.game.game_over:
-            if type_player in liste_IA:
-                # Current player is a bot, use AI to determine next move
-                col = self.get_ai_move(type_player, self.game.current_player)
-                self.root.after(500, lambda: self.play_ai_move(col))
-            else:
+            if type_player not in liste_IA:
                 # Current player is human, get column from mouse click event
                 col = event.x // SQUARE_SIZE
                 
@@ -250,10 +263,6 @@ class Connect4Viewer:
                     else:
                         self.game.current_player = self.toggle_player(self.game.current_player)
                         
-                        if type_player in liste_IA:
-                            # Next player is a bot, let it play automatically
-                            self.on_click(None)
-                    
     def get_ai_move(self, player, current_player):
         if player == "minimax":
             if current_player == 1:
