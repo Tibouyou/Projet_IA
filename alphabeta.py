@@ -72,10 +72,28 @@ class Alphabeta:
             return best_score
 
     def get_valid_moves(self, board):
-        return [col for col in range(COLUMN_COUNT) if board[ROW_COUNT-1][col] == 0]
-        """valid_moves = []
+        
+        #return [col for col in range(COLUMN_COUNT) if board[ROW_COUNT-1][col] == 0]
+        
+        valid_moves = []
+        if(board[ROW_COUNT-1][3] == 0):
+            valid_moves.append(3)
+        if(board[ROW_COUNT-1][2] == 0):
+            valid_moves.append(2)
+        if(board[ROW_COUNT-1][4] == 0):
+            valid_moves.append(4)
+        if(board[ROW_COUNT-1][1] == 0):
+            valid_moves.append(1)
+        if(board[ROW_COUNT-1][5] == 0):
+            valid_moves.append(5)
         if(board[ROW_COUNT-1][0] == 0):
-            valid_moves.append(0)"""
+            valid_moves.append(0)
+        if(board[ROW_COUNT-1][6] == 0):
+            valid_moves.append(6)
+        
+        return valid_moves
+
+        
         
 
     def make_move(self, board, move, player):
