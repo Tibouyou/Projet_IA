@@ -234,7 +234,7 @@ class Connect4Viewer:
         if not self.game.game_over:
             if type_player in liste_IA:
                 # Current player is a bot, use AI to determine next move
-                col = self.get_ai_move(type_player, self.game.current_player)
+                col = self.get_ai_move(self.game.current_player)
                 self.root.after(500, lambda: self.play_ai_move(col))
         
         self.root.after(100, self.update)
@@ -263,23 +263,11 @@ class Connect4Viewer:
                     else:
                         self.game.current_player = self.toggle_player(self.game.current_player)
                         
-    def get_ai_move(self, player, current_player):
-        if player == "minimax":
-            if current_player == 1:
-                col = self.game._player1.get_move(self.game, self.game.current_player)
-            else:
-                col = self.game._player2.get_move(self.game, self.game.current_player)
-        elif player == "alphabeta":
-            if current_player == 1:
-                col = self.game._player1.get_move(self.game, self.game.current_player)
-            else:
-                col = self.game._player2.get_move(self.game, self.game.current_player)
-        elif player == "mcts":
-            if current_player == 1:
-                col = self.game._player1.get_move(self.game, self.game.current_player)
-            else:
-                col = self.game._player2.get_move(self.game, self.game.current_player)
-              
+    def get_ai_move(self, current_player):
+        if current_player == 1:
+            col = self.game._player1.get_move(self.game, self.game.current_player)
+        else:
+            col = self.game._player2.get_move(self.game, self.game.current_player)
         return col
 
     def play_ai_move(self, col):
