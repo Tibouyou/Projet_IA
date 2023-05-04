@@ -129,12 +129,13 @@ class MonteCarlo:
 
 
 class MCTS:
-    def __init__(self, player):
+    def __init__(self, player, profondeur):
         self.player = player
+        self._profondeur = profondeur
 
     def get_move(self, state, player):
         mcts = MonteCarlo(state)
-        mcts.search(1000)
+        mcts.search(self._profondeur)
 
         if self.player == 1:
             return mcts.best_child().state.last_move

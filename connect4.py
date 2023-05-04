@@ -22,7 +22,7 @@ class Connect4Game:
             self._player1 = Alphabeta(depth1)
             self._player1_type = "alphabeta"
         elif(player1 == "mcts"):
-            self._player1 = MCTS(1)                            #TODO : ajouter les paramètres d'initialisation de MCTS
+            self._player1 = MCTS(1,depth1)                            #TODO : ajouter les paramètres d'initialisation de MCTS
             self._player1_type = "mcts"
         else:
             self._player1 = Human("Player 1")
@@ -35,7 +35,7 @@ class Connect4Game:
             self._player2 = Alphabeta(depth2)
             self._player2_type = "alphabeta"
         elif(player2 == "mcts"):
-            self._player2 = MCTS(1)                              #TODO : ajouter les paramètres d'initialisation de MCTS
+            self._player2 = MCTS(2,depth2)                              #TODO : ajouter les paramètres d'initialisation de MCTS
             self._player2_type = "mcts"
         else:
             self._player2 = Human("Player 2")
@@ -241,10 +241,10 @@ class Connect4Viewer:
         if not self.game.game_over:
             if type_player in liste_IA:
                 # Current player is a bot, use AI to determine next move
-                col = self.get_ai_move(type_player, self.game.current_player)
+                col = self.get_ai_move(self.game.current_player)
                 self.root.after(500, lambda: self.play_ai_move(col))
         
-        self.root.after(50, self.update)
+        self.root.after(100, self.update)
 
 
     def on_click(self, event):
@@ -270,23 +270,11 @@ class Connect4Viewer:
                     else:
                         self.game.current_player = self.toggle_player(self.game.current_player)
                         
-    def get_ai_move(self, player, current_player):
-        if player == "minimax":
-            if current_player == 1:
-                col = self.game._player1.get_move(self.game, self.game.current_player)
-            else:
-                col = self.game._player2.get_move(self.game, self.game.current_player)
-        elif player == "alphabeta":
-            if current_player == 1:
-                col = self.game._player1.get_move(self.game, self.game.current_player)
-            else:
-                col = self.game._player2.get_move(self.game, self.game.current_player)
-        elif player == "mcts":
-            if current_player == 1:
-                col = self.game._player1.get_move(self.game, self.game.current_player)
-            else:
-                col = self.game._player2.get_move(self.game, self.game.current_player)
-              
+    def get_ai_move(self, current_player):
+        if current_player == 1:
+            col = self.game._player1.get_move(self.game, self.game.current_player)
+        else:
+            col = self.game._player2.get_move(self.game, self.game.current_player)
         return col
 
     def play_ai_move(self, col):
