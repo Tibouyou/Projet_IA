@@ -22,7 +22,7 @@ class Connect4Game:
             self._player1 = Alphabeta(depth1)
             self._player1_type = "alphabeta"
         elif(player1 == "mcts"):
-            self._player1 = MCTS(1)                            #TODO : ajouter les paramètres d'initialisation de MCTS
+            self._player1 = MCTS(1,depth1)                            #TODO : ajouter les paramètres d'initialisation de MCTS
             self._player1_type = "mcts"
         else:
             self._player1 = Human("Player 1")
@@ -35,7 +35,7 @@ class Connect4Game:
             self._player2 = Alphabeta(depth2)
             self._player2_type = "alphabeta"
         elif(player2 == "mcts"):
-            self._player2 = MCTS(1)                              #TODO : ajouter les paramètres d'initialisation de MCTS
+            self._player2 = MCTS(2,depth2)                              #TODO : ajouter les paramètres d'initialisation de MCTS
             self._player2_type = "mcts"
         else:
             self._player2 = Human("Player 2")
@@ -183,7 +183,6 @@ class Connect4Console:
                 col = self.game._player1.get_move(self.game, self.game.current_player) 
             else:
                 col = self.game._player2.get_move(self.game, self.game.current_player)
-            print(col)
             if self.game.is_valid_location(col):
                 row = self.game.get_next_open_row(col)
                 self.game.drop_piece(row, col, self.game.current_player)
@@ -238,7 +237,7 @@ class Connect4Viewer:
                 col = self.get_ai_move(type_player, self.game.current_player)
                 self.root.after(500, lambda: self.play_ai_move(col))
         
-        self.root.after(50, self.update)
+        self.root.after(100, self.update)
 
 
     def on_click(self, event):
