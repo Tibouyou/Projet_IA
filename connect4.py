@@ -183,7 +183,7 @@ class Connect4Console:
                 col = self.game._player1.get_move(self.game, self.game.current_player) 
             else:
                 col = self.game._player2.get_move(self.game, self.game.current_player)
-            print(col)
+            
             if self.game.is_valid_location(col):
                 row = self.game.get_next_open_row(col)
                 self.game.drop_piece(row, col, self.game.current_player)
@@ -196,6 +196,12 @@ class Connect4Console:
                     self.game.current_player = PLAYER2_PIECE if self.game.current_player == PLAYER1_PIECE else PLAYER1_PIECE
                     if self._show_board:
                         self.game.print_board()
+            else:
+                print("Tiens, tiens, tiens... Il semblerait que les colonnes sont pleine.")
+                self.game.game_over = True
+                self.game.current_player = None
+
+                
         return self.game.current_player
 
 class Connect4Viewer:

@@ -19,13 +19,19 @@ class Alphabeta:
             temp_board = deepcopy(board)
             self.make_move(temp_board, move, player)
             score = self.alphabeta(temp_board, self.max_depth, False, player, alpha, beta)
+            #print(score,end="|")
             if score > best_score:
                 best_score = score
                 alpha = score
                 best_move = move
-        if(best_move == None):
-            print("best move is None, I lost. GG !")
-            best_move = valid_moves[0]
+        #print("")
+        if best_move == None :
+            if valid_moves == [] :
+                game.game_over = True
+                best_move = -1
+            else :
+                print("best move is None, I lost. GG !")
+                best_move = valid_moves[0]
         return best_move         
 
     def alphabeta(self, board, depth, tour_max, player, alpha, beta):
@@ -181,14 +187,15 @@ class Alphabeta:
         
         if window.count(EMPTY) == 2 :
             if window.count(piece) == 2:
-                return 5
+                return 15
             else:
-                return -5
+                return -15
         if window.count(EMPTY) == 1 :
             if window.count(piece) == 3:
                 return 50
             else:
                 return -50
+            
         if window.count(piece) == 4:
             return float('inf')
         if window.count(opp_piece) == 4:
