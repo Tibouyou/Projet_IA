@@ -201,7 +201,7 @@ class Alphabeta:
         if window.count(opp_piece) == 4:
             return float('-inf')
 
-    def print_type():
+    def print_type(self):
         print("alphabeta")
 
 

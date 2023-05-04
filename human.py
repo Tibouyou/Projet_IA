@@ -8,3 +8,6 @@ class Human:
         while (col<0 or col>6) or (not type(col) == int) :
             col = int(input( "enter your column choice (0-6): "))
         return col
+    
+    def print_type(self):
+        print("Human")
