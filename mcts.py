@@ -141,3 +141,6 @@ class MCTS:
             return mcts.best_child().state.last_move
         else:
             return mcts.best_child().state.last_move - 1
+
+    def print_type():
+        print("MCTS")

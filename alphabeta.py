@@ -201,6 +201,11 @@ class Alphabeta:
         if window.count(opp_piece) == 4:
             return float('-inf')
 
+    def print_type():
+        print("alphabeta")
+
+
+
 def printboard(board):
     print("printboard debug alphabeta : ")
     for i in range(6):

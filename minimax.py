@@ -137,6 +137,8 @@ class Minimax:
 
         return score
 
+    def print_type():
+        print("minimax")
 
 def printboard(board):
     print("printboard debug minimax : ")
