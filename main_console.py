@@ -4,17 +4,14 @@ from connect4 import Connect4Game, Connect4Viewer, Connect4Console
 from const import *
 from tqdm import tqdm
 
-def play_game(interface, p1, p2, hide_board, depth1, depth2, results):
+def play_game( p1, p2, hide_board, depth1, depth2, results):
     game = Connect4Game(p1, p2, depth1, depth2)
-    if interface == "graphique":
-        viewer = Connect4Viewer(game)
-    else:
-        console = Connect4Console(game, hide_board)
-        winner = console.play()
-        if winner == 1:
-            results['player_1'] += 1
-        elif winner == 2:
-            results['player_2'] += 1
+    console = Connect4Console(game, hide_board)
+    winner = console.play()
+    if winner == 1:
+        results['player_1'] += 1
+    elif winner == 2:
+        results['player_2'] += 1
 
 def play_games(args):
     
@@ -24,7 +21,7 @@ def play_games(args):
     if(args.num_games == 1 or args.player_1 == "human" or args.player_2 == "human" or args.interface == "graphique" or args.max_workers == 1 ):
         print ("Mode séquentiel")
         for i in range(args.num_games):
-            play_game(args.interface, args.player_1, args.player_2, args.hide_board, args.depth_player_1, args.depth_player_2, results)
+            play_game(args.player_1, args.player_2, args.hide_board, args.depth_player_1, args.depth_player_2, results)
     else:
         print ("Mode parallèle")
         # créer une instance de ThreadPoolExecutor avec args.max_workers threads
@@ -32,7 +29,7 @@ def play_games(args):
             # lancer plusieurs parties en parallèle
             futures = []
             for i in range(args.num_games):
-                future = executor.submit(play_game, args.interface, args.player_1, args.player_2, args.hide_board, args.depth_player_1, args.depth_player_2, results)
+                future = executor.submit(play_game, args.player_1, args.player_2, args.hide_board, args.depth_player_1, args.depth_player_2, results)
                 futures.append(future)
             
             # créer une barre de progression
@@ -52,14 +49,13 @@ def play_games(args):
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser()
-    parser.add_argument("-i","--interface", help="Interface à utiliser : console ou graphique", default="console")
     parser.add_argument("-p1","--player_1", help="player 1 : minimax / alphabeta / mcts / human", default="minimax")
     parser.add_argument("-p2","--player_2", help="player 2 : minimax / alphabeta / mcts / human", default="alphabeta")
     parser.add_argument("-c","--hide_board", help="Afficher le plateau de jeu", action="store_false")
     parser.add_argument("-n","--num_games", help="Nombre de parties à jouer en même temps", type=int, default=1)
     parser.add_argument("-w","--max_workers", help="Nombre de threads utilisé ", type=int, default=6)
     parser.add_argument("-d1","--depth_player_1", help="Profondeur de recherche du joueur 1", type=int, default=3)
-    parser.add_argument("-d2","--depth_player_2", help="Profondeur de recherche du joueur 2", type=int, default=3)
+    parser.add_argument("-d2","--depth_player_2", help="Profondeur de recherche du joueur 2", type=int, default=5)
     args = parser.parse_args()
 
     # lancer les parties en parallèle (ou pas selon les arguments)
