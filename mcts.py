@@ -132,7 +132,7 @@ class MCTS:
     def __init__(self, player):
         self.player = player
 
-    def get_move(self, state):
+    def get_move(self, state, player):
         mcts = MonteCarlo(state)
         mcts.search(1000)
 

@@ -5,17 +5,33 @@ import tkinter as tk
 from minimax import Minimax
 from alphabeta import Alphabeta
 from mcts import MCTS
-from time import *
+from human import Human
 
 class Connect4Game:
 
-    def __init__(self,player1,player2):
+    def __init__(self, player1, player2, depth1, depth2):
         self.board = [[0 for j in range(COLUMN_COUNT)] for i in range(ROW_COUNT)]
         self.game_over = False
         self.current_player = PLAYER1_PIECE
         self.last_move = 0
-        self._player1 = player1
-        self._player2 = player2
+        
+        if(player1 == "minimax"):
+            self._player1 = Minimax(depth1)
+        elif(player1 == "alphabeta"):
+            self._player1 = Alphabeta(depth1)
+        elif(player1 == "mcts"):
+            self._player1 = MCTS(1)                            #TODO : ajouter les paramètres d'initialisation de MCTS
+        else:
+            self._player1 = Human("Player 1")
+        
+        if(player2 == "minimax"):
+            self._player2 = Minimax(depth2)
+        elif(player2 == "alphabeta"):
+            self._player2 = Alphabeta(depth2)
+        elif(player2 == "mcts"):
+            self._player2 = MCTS(1)                              #TODO : ajouter les paramètres d'initialisation de MCTS
+        else:
+            self._player2 = Human("Player 2")
 
     def drop_piece(self, row, col, piece):
         self.board[row][col] = piece
@@ -109,7 +125,7 @@ class Connect4Game:
 
     def is_terminal(self):
     # Check if the current node is a terminal state
-        board = self.board.copy()
+        board = deepcopy(self.board)
         # Check for horizontal win
         for row in range(len(board)):
             for col in range(len(board[0]) - 3):
@@ -138,7 +154,7 @@ class Connect4Game:
         """
         Retourne une copie de l'objet.
         """
-        game = Connect4Game(self._player1, self._player2)
+        game = Connect4Game(self._player1, self._player2, 0, 0)
         game.board = [row[:] for row in self.board]
         game.game_over = self.game_over
         game.current_player = self.current_player
@@ -150,40 +166,18 @@ class Connect4Console:
     
     def __init__(self,game,show_board=True):
         self.game = game
-        self.minimax = Minimax(4)
-        self.alphabeta = Alphabeta(4)
         self._show_board = show_board
         self.play()
 
     def play(self):
         while not self.game.game_over:
             if self.game.current_player == PLAYER1_PIECE:
-                if (self.game._player1 == "mcts"):
-                    print("player 1 = mcts")
-                    mcts = MCTS(1)
-                    col = mcts.get_move(self.game)
-                elif (self.game._player1 == "minimax"):
-                    col = self.minimax.get_best_move(self.game.board , self.game.current_player)
-                elif (self.game._player1 == "alphabeta"):
-                    col = self.alphabeta.get_best_move(self.game.board , self.game.current_player)
-                else:
-                    col = int(input("Player 1, enter your column choice (0-6): "))
+                col = self.game._player1.get_move(self.game, self.game.current_player) 
             else:
-                if (self.game._player2 == "mcts"):
-                    print("player 2 = mcts")
-                    mcts = MCTS(1)
-                    col = mcts.get_move(self.game)
-                elif (self.game._player2 == "minimax"):
-                    col = self.minimax.get_best_move(self.game.board , self.game.current_player)
-                elif (self.game._player2 == "alphabeta"):
-                    col = self.alphabeta.get_best_move(self.game.board , self.game.current_player)
-                else:
-                    col = int(input("Player 2, enter your column choice (0-6): "))
-
+                col = self.game._player2.get_move(self.game, self.game.current_player)
             if self.game.is_valid_location(col):
                 row = self.game.get_next_open_row(col)
                 self.game.drop_piece(row, col, self.game.current_player)
-
                 if self.game.winning_move(self.game.current_player):
                     self.game.game_over = True
                     if self._show_board:

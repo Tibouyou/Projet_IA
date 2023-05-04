@@ -3,11 +3,12 @@ from copy import deepcopy
 from const import *
 
 class Alphabeta:
-    def __init__(self, max_depth=4):
+    def __init__(self, max_depth):
         self.max_depth = max_depth
 
-    def get_best_move(self, board, player):
+    def get_move(self, game, player):
         
+        board = game.board
         valid_moves = self.get_valid_moves(board)
         best_move = None
         best_score = float('-inf')
@@ -26,16 +27,6 @@ class Alphabeta:
 
         #print("")                      #debug pour voir les scores de chaque coup (retour à la ligne)
         return best_move         
-
-
-
-
-
-
-
-
-
-
 
     def alphabeta(self, board, depth, tour_max, player, alpha, beta):
         if depth == 0 or self.is_terminal_node(board):
@@ -79,17 +70,6 @@ class Alphabeta:
                     beta = score
 
             return best_score
-
-
-
-
-
-
-
-
-
-
-
 
     def get_valid_moves(self, board):
         return [col for col in range(COLUMN_COUNT) if board[ROW_COUNT-1][col] == 0]
@@ -190,8 +170,8 @@ class Alphabeta:
 
 
 def printboard(board):
-    print("Board debug : ")
+    print("printboard debug alphabeta : ")
     for i in range(6):
         for j in range(7):
-            print(board[i][j], end="\t")
-        print("\n")
+            print(board[i][j], end="-")
+        print("|")
