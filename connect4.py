@@ -17,21 +17,29 @@ class Connect4Game:
         
         if(player1 == "minimax"):
             self._player1 = Minimax(depth1)
+            self._player1_type = "minimax"
         elif(player1 == "alphabeta"):
             self._player1 = Alphabeta(depth1)
+            self._player1_type = "alphabeta"
         elif(player1 == "mcts"):
             self._player1 = MCTS(1)                            #TODO : ajouter les paramètres d'initialisation de MCTS
+            self._player1_type = "mcts"
         else:
             self._player1 = Human("Player 1")
+            self._player1_type = "human"
         
         if(player2 == "minimax"):
             self._player2 = Minimax(depth2)
+            self._player2_type = "minimax"
         elif(player2 == "alphabeta"):
             self._player2 = Alphabeta(depth2)
+            self._player2_type = "alphabeta"
         elif(player2 == "mcts"):
             self._player2 = MCTS(1)                              #TODO : ajouter les paramètres d'initialisation de MCTS
+            self._player2_type = "mcts"
         else:
             self._player2 = Human("Player 2")
+            self._player2_type = "human"
 
     def drop_piece(self, row, col, piece):
         self.board[row][col] = piece
@@ -212,22 +220,73 @@ class Connect4Viewer:
                 y2 = y1 + SQUARE_SIZE
                 self.canvas.create_rectangle(x1, y1, x2, y2, fill="blue")
                 self.canvas.create_oval(x1, y1, x2, y2, fill="white")
-                
+                  
         self.canvas.bind("<Button-1>", self.on_click)
         
     def on_click(self, event):
+        liste_IA = ["minimax", "alphabeta", "mcts"]
+        if self.game.current_player == 1:
+            type_player = self.game._player1_type
+        else:
+            type_player = self.game._player2_type
+
         if not self.game.game_over:
-            col = event.x // SQUARE_SIZE
-            if self.game.is_valid_location(col):
-                row = self.game.get_next_open_row(col)
-                self.game.drop_piece(row, col, self.game.current_player)
-                self.draw_piece(row, col)
+            if type_player in liste_IA:
+                # Current player is a bot, use AI to determine next move
+                col = self.get_ai_move(type_player, self.game.current_player)
+                self.root.after(500, lambda: self.play_ai_move(col))
+            else:
+                # Current player is human, get column from mouse click event
+                col = event.x // SQUARE_SIZE
                 
-                if self.game.winning_move(self.game.current_player):
-                    self.game.game_over = True
-                    self.show_message("Player {} wins!".format(self.game.current_player))
-                else:
-                    self.game.current_player = self.toggle_player(self.game.current_player)
+                if self.game.is_valid_location(col):
+                    row = self.game.get_next_open_row(col)
+                    self.game.drop_piece(row, col, self.game.current_player)
+                    self.draw_piece(row, col)
+                    
+                    if self.game.winning_move(self.game.current_player):
+                        self.game.game_over = True
+                        self.show_message("Player {} wins!".format(self.game.current_player))
+                    else:
+                        self.game.current_player = self.toggle_player(self.game.current_player)
+                        
+                        if type_player in liste_IA:
+                            # Next player is a bot, let it play automatically
+                            self.on_click(None)
+                    
+    def get_ai_move(self, player, current_player):
+        if player == "minimax":
+            if current_player == 1:
+                col = self.game._player1.get_move(self.game, self.game.current_player)
+            else:
+                col = self.game._player2.get_move(self.game, self.game.current_player)
+        elif player == "alphabeta":
+            if current_player == 1:
+                col = self.game._player1.get_move(self.game, self.game.current_player)
+            else:
+                col = self.game._player2.get_move(self.game, self.game.current_player)
+        elif player == "mcts":
+            if current_player == 1:
+                col = self.game._player1.get_move(self.game, self.game.current_player)
+            else:
+                col = self.game._player2.get_move(self.game, self.game.current_player)
+              
+        return col
+
+    def play_ai_move(self, col):
+        if self.game.is_valid_location(col):
+            row = self.game.get_next_open_row(col)
+            self.game.drop_piece(row, col, self.game.current_player)
+            self.draw_piece(row, col)
+            
+            if self.game.winning_move(self.game.current_player):
+                self.game.game_over = True
+                self.show_message("Player {} wins!".format(self.game.current_player))
+            else:
+                self.game.current_player = self.toggle_player(self.game.current_player)
+                
+                if self.game.current_player == 2:
+                    self.on_click(None)
             
     def draw_piece(self, row, col):
         x = col*SQUARE_SIZE + SQUARE_SIZE//2
@@ -240,11 +299,6 @@ class Connect4Viewer:
     
     def show_message(self, message):
         self.canvas.create_text(WIDTH//2, HEIGHT//2, text=message, fill="white", font=("Arial", 24))
-
-
-
-
-
 
 
 def printboard(board):
