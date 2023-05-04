@@ -175,6 +175,7 @@ class Connect4Console:
                 col = self.game._player1.get_move(self.game, self.game.current_player) 
             else:
                 col = self.game._player2.get_move(self.game, self.game.current_player)
+            print(col)
             if self.game.is_valid_location(col):
                 row = self.game.get_next_open_row(col)
                 self.game.drop_piece(row, col, self.game.current_player)
@@ -218,6 +219,18 @@ class Connect4Viewer:
     def on_click(self, event):
         if not self.game.game_over:
             col = event.x // SQUARE_SIZE
+            if self.game.is_valid_location(col):
+                row = self.game.get_next_open_row(col)
+                self.game.drop_piece(row, col, self.game.current_player)
+                self.draw_piece(row, col)
+                
+                if self.game.winning_move(self.game.current_player):
+                    self.game.game_over = True
+                    self.show_message("Player {} wins!".format(self.game.current_player))
+                else:
+                    self.game.current_player = self.toggle_player(self.game.current_player)
+        if not self.game.game_over:
+            col = self.game._player2.get_move(self.game, self.game.current_player)
             if self.game.is_valid_location(col):
                 row = self.game.get_next_open_row(col)
                 self.game.drop_piece(row, col, self.game.current_player)
