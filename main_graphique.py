@@ -4,7 +4,6 @@ from connect4 import Connect4Game, Connect4Viewer, Connect4Console
 from const import *
 from tqdm import tqdm
 import tkinter as tk
-from main import play_game
 
 var = None
 var2 = None
