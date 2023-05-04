@@ -21,21 +21,12 @@ def show_entry_fields():
     print("Player 2 algorithm: ", p2_algo)
     print("Player 1 depth: ", p1_depth)
     print("Player 2 depth: ", p2_depth)
+    play_game(p1_algo, p2_algo, p1_depth, p2_depth)
 
-    results = {'player_1': 0, 'player_2': 0}
-    play_game("graphique", p1_algo, p2_algo, True, p1_depth, p2_depth, results)
-
-def play_game(interface, p1, p2, hide_board, depth1, depth2, results):
+def play_game(p1, p2, depth1, depth2):
     game = Connect4Game(p1, p2, depth1, depth2)
-    if interface == "graphique":
-        viewer = Connect4Viewer(game)
-    else:
-        console = Connect4Console(game, hide_board)
-        winner = console.play()
-        if winner == 1:
-            results['player_1'] += 1
-        elif winner == 2:
-            results['player_2'] += 1
+    viewer = Connect4Viewer(game)
+    
 
 def main():
     global var, var2, e1, e2
@@ -55,7 +46,7 @@ def main():
 
     R3 = tk.Radiobutton(root, text="MCTS", variable=var, value="mcts")
     
-    R4 = tk.Radiobutton(root, text="Humain", variable=var, value="humain")
+    R4 = tk.Radiobutton(root, text="Humain", variable=var, value="human")
 
 
     R1.grid(row=1, column=0)
