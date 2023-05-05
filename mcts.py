@@ -65,19 +65,28 @@ class MonteCarlo:
         :param piece: 1 or -1 depending on whose turn it is
         :return: score of the window
         """
-        score = 0
         opp_piece = self.get_opponent(piece)
+
+        if window.count(EMPTY) > 2:
+            return 0
+        if window.count(piece) > 0 and window.count(opp_piece) > 0:
+            return 0
+        
+        if window.count(EMPTY) == 2 :
+            if window.count(piece) == 2:
+                return 15
+            else:
+                return -15
+        if window.count(EMPTY) == 1 :
+            if window.count(piece) == 3:
+                return 50
+            else:
+                return -50
+            
         if window.count(piece) == 4:
-            score += 100
-        elif window.count(piece) == 3 and window.count(EMPTY) == 1:
-            score += 5
-        elif window.count(piece) == 2 and window.count(EMPTY) == 2:
-            score += 2
-
-        if window.count(opp_piece) == 3 and window.count(EMPTY) == 1:
-            score -= 4
-
-        return score
+            return float('inf')
+        if window.count(opp_piece) == 4:
+            return float('-inf')
     
     def get_opponent(self, player):
         return 3 - player

@@ -6,8 +6,7 @@ class Alphabeta:
     def __init__(self, max_depth):
         self.max_depth = max_depth
 
-    def get_move(self, game, player):
-        
+    def get_move(self, game, player):        
         board = game.board
         valid_moves = self.get_valid_moves(board)
         best_move = None
@@ -30,7 +29,7 @@ class Alphabeta:
                 game.game_over = True
                 best_move = -1
             else :
-                print("best move is None, I lost. GG !")
+                #print("best move is None, I lost. GG !")
                 best_move = valid_moves[0]
         return best_move         
 

@@ -232,6 +232,7 @@ class Connect4Viewer:
         self.update()
         
     def update(self):
+        #print (self.game.current_player,end=" ")             ### QUOIIIIIIIIIIIIIIIIIIIIIIIIIIIIII?
         liste_IA = ["minimax", "alphabeta", "mcts"]
         if self.game.current_player == 1:
             type_player = self.game._player1_type
@@ -240,11 +241,14 @@ class Connect4Viewer:
         
         if not self.game.game_over:
             if type_player in liste_IA:
+                #print("C",end=" ")
                 # Current player is a bot, use AI to determine next move
+                
                 col = self.get_ai_move(self.game.current_player)
                 self.root.after(500, lambda: self.play_ai_move(col))
         
-        self.root.after(100, self.update)
+        
+        #print("Fin_update")
 
 
     def on_click(self, event):
@@ -269,8 +273,12 @@ class Connect4Viewer:
                         self.show_message("Player {} wins!".format(self.game.current_player))
                     else:
                         self.game.current_player = self.toggle_player(self.game.current_player)
-                        
+                    
+                self.root.after(100, self.update)
+
+
     def get_ai_move(self, current_player):
+        #print("get_move", end=" ")
         if current_player == 1:
             col = self.game._player1.get_move(self.game, self.game.current_player)
         else:
@@ -278,11 +286,13 @@ class Connect4Viewer:
         return col
 
     def play_ai_move(self, col):
+        #print("play_move", end=" ")
         if self.game.is_valid_location(col):
+            #print("val_loca", end=" ")
             row = self.game.get_next_open_row(col)
             self.game.drop_piece(row, col, self.game.current_player)
             self.draw_piece(row, col)
-            
+
             if self.game.winning_move(self.game.current_player):
                 self.game.game_over = True
                 self.show_message("Player {} wins!".format(self.game.current_player))
@@ -291,6 +301,7 @@ class Connect4Viewer:
                 
                 if self.game.current_player == 2:
                     self.on_click(None)
+        self.root.after(100, self.update)
             
     def draw_piece(self, row, col):
         x = col*SQUARE_SIZE + SQUARE_SIZE//2
