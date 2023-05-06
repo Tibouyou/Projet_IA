@@ -14,7 +14,7 @@ class Connect4Game:
         self.game_over = False
         self.current_player = PLAYER1_PIECE
         self.last_move = 0
-        
+
         if(player1 == "minimax"):
             self._player1 = Minimax(depth1)
             self._player1_type = "minimax"
@@ -22,7 +22,7 @@ class Connect4Game:
             self._player1 = Alphabeta(depth1)
             self._player1_type = "alphabeta"
         elif(player1 == "mcts"):
-            self._player1 = MCTS(depth1)                            #TODO : ajouter les paramètres d'initialisation de MCTS
+            self._player1 = MCTS(depth1)                             #TODO : ajouter des paramètres d'initialisation de MCTS
             self._player1_type = "mcts"
         else:
             self._player1 = Human("Player 1")
@@ -35,7 +35,7 @@ class Connect4Game:
             self._player2 = Alphabeta(depth2)
             self._player2_type = "alphabeta"
         elif(player2 == "mcts"):
-            self._player2 = MCTS(depth2)                              #TODO : ajouter les paramètres d'initialisation de MCTS
+            self._player2 = MCTS(depth2)                              #TODO : ajouter des paramètres d'initialisation de MCTS
             self._player2_type = "mcts"
         else:
             self._player2 = Human("Player 2")
@@ -155,6 +155,9 @@ class Connect4Game:
                 if board[row][col] != 0 and board[row][col] == board[row-1][col+1] == board[row-2][col+2] == board[row-3][col+3]:
                     return True
         # If none of the above conditions are met, the game is not over yet
+        if(self.get_legal_moves() == []):
+            return True
+        
         return False
 
     
@@ -168,6 +171,15 @@ class Connect4Game:
         game.current_player = self.current_player
         game.last_move = self.last_move
         return game
+    
+    def move(self, col):
+        row = self.get_next_open_row(col)
+        self.drop_piece(row, col, self.current_player)
+        self.last_move = [row, col]
+        self.current_player -= 3
+
+    def game_over_check(self):
+        return self.is_terminal()
 
                 
 class Connect4Console:
@@ -178,31 +190,93 @@ class Connect4Console:
         self.play()
 
     def play(self):
+        if(self.game._player1_type == "mcts" or self.game._player2_type == "mcts"):
+            mcts_is_here = True
+        else:
+            mcts_is_here = False
         while not self.game.game_over:
-            if self.game.current_player == PLAYER1_PIECE:
-                col = self.game._player1.get_move(self.game, self.game.current_player) 
-            else:
-                col = self.game._player2.get_move(self.game, self.game.current_player)
             
-            if self.game.is_valid_location(col):
-                row = self.game.get_next_open_row(col)
-                self.game.drop_piece(row, col, self.game.current_player)
-                if self.game.winning_move(self.game.current_player):
-                    self.game.game_over = True
-                    if self._show_board:
-                        self.game.print_board()
-                        print("Player " + str(self.game.current_player) + " wins!")
+            if mcts_is_here:
+                if self.game.current_player == PLAYER1_PIECE:
+                    if(self.game._player1_type != "mcts"):
+                        col = self.game._player1.get_move(self.game, self.game.current_player)
+                    else:
+                        self.game._player1.search()
+                        num_rollouts, run_time = self.game._player1.statistics()
+                        print("p1 Statistics: ", num_rollouts, "rollouts in", run_time, "seconds")
+                        col = self.game._player1.best_move()
+                    print("p1 move: ", col)
                 else:
-                    self.game.current_player = PLAYER2_PIECE if self.game.current_player == PLAYER1_PIECE else PLAYER1_PIECE
+                    if(self.game._player2_type != "mcts"):
+                        col = self.game._player2.get_move(self.game, self.game.current_player)
+                    else:
+                        self.game._player2.search()
+                        num_rollouts, run_time = self.game._player2.statistics()
+                        print("p2 Statistics: ", num_rollouts, "rollouts in", run_time, "seconds")
+                        col = self.game._player2.best_move()
+                    print("p2 move: ", col)
+
+                if col != -1:
+
+                    if(self.game._player1_type == "mcts"):
+                        self.game._player1.move(col)
+                    if(self.game._player2_type == "mcts"):
+                        self.game._player2.move(col)
+                    
+                    row = self.game.get_next_open_row(col)
+                    self.game.drop_piece(row, col, self.game.current_player)
+                    
                     if self._show_board:
                         self.game.print_board()
+                    
+                    if self.game.game_over_check():
+                        if self.game.get_legal_moves() == []:
+                            print("Tie!")
+                            self.game.game_over = True
+                            return None
+                        else:
+                            print("Player ", self.game.current_player, " wins!")
+                            self.game.game_over = True
+                            return self.game.current_player
+                    
+                    self.game.current_player = 3 - self.game.current_player
+                else :
+                    if self.game.get_legal_moves() == []:
+                        print("Tie!")
+                        self.game.game_over = True
+                        return None
+                    else:
+                        print("Player ",self.game.current_player, " wins!")
+                        self.game.game_over = True
+                        return self.game.current_player
+
+                    
             else:
-                #print("Tiens, tiens, tiens... Il semblerait que les colonnes sont pleine.")
-                self.game.game_over = True
-                self.game.current_player = None
+                if self.game.current_player == PLAYER1_PIECE:
+                    col = self.game._player1.get_move(self.game, self.game.current_player)
+                else:
+                    col = self.game._player2.get_move(self.game, self.game.current_player)
+
+                if self.game.is_valid_location(col):
+                    row = self.game.get_next_open_row(col)
+                    self.game.drop_piece(row, col, self.game.current_player)
+                    if self.game.winning_move(self.game.current_player):
+                        self.game.game_over = True
+                        if self._show_board:
+                            self.game.print_board()
+                            print("Player " + str(self.game.current_player) + " wins!")
+                    else:
+                        self.game.current_player = PLAYER2_PIECE if self.game.current_player == PLAYER1_PIECE else PLAYER1_PIECE
+                        if self._show_board:
+                            self.game.print_board()
+                else:
+                    #print("Tiens, tiens, tiens... Il semblerait que les colonnes sont pleine.")
+                    self.game.game_over = True
+                    self.game.current_player = None
 
                 
         return self.game.current_player
+    
 
 class Connect4Viewer:
     

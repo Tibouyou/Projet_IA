@@ -204,6 +204,11 @@ class Alphabeta:
             return float('inf')
         if window.count(opp_piece) == 4:
             return float('-inf')
+        
+        print("evaluate_window error")
+        print(window)
+        print(piece)
+        return 0
 
     def print_type(self):
         print("alphabeta")

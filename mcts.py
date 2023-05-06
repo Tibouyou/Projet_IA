@@ -2,7 +2,9 @@ import random
 import time
 import math
 from copy import deepcopy
-from const import *
+
+from ConnectState import ConnectState
+from const import GameMeta, MCTSMeta
 
 
 class Node:
@@ -12,26 +14,27 @@ class Node:
         self.N = 0
         self.Q = 0
         self.children = {}
-        self.outcome = 0
+        self.outcome = GameMeta.PLAYERS['none']
 
     def add_children(self, children: dict) -> None:
         for child in children:
             self.children[child.move] = child
 
-    def value(self, explore: float = EXPLORATION):
+    def value(self, explore: float = MCTSMeta.EXPLORATION):
         if self.N == 0:
-            return 0 if explore == 0 else float('inf')
+            return 0 if explore == 0 else GameMeta.INF
         else:
             return self.Q / self.N + explore * math.sqrt(math.log(self.parent.N) / self.N)
 
 
 class MCTS:
-    def __init__(self, game):
-        self.root_state = deepcopy(game)
+    def __init__(self, limit_run_time, state=ConnectState()):
+        self.root_state = deepcopy(state)
         self.root = Node(None, None)
         self.run_time = 0
         self.node_count = 0
         self.num_rollouts = 0
+        self.limit_run_time = float(limit_run_time/100)
 
     def select_node(self) -> tuple:
         node = self.root
@@ -54,27 +57,21 @@ class MCTS:
 
         return node, state
 
-    def expand(self, parent: Node, game) -> bool:
-        if game.game_over:
+    def expand(self, parent: Node, state: ConnectState) -> bool:
+        if state.game_over():
             return False
 
-        children = [Node(move, parent) for move in game.get_legal_moves()]
+        children = [Node(move, parent) for move in state.get_legal_moves()]
         parent.add_children(children)
 
         return True
 
-        
-    def roll_out(self, game) -> int:
-        while not game.game_over():
-            game.move(random.choice(game.get_legal_moves()))
+    def roll_out(self, state: ConnectState) -> int:
+        while not state.game_over():
+            state.move(random.choice(state.get_legal_moves()))
 
-        return self.get_outcome(game)
+        return state.get_outcome()
 
-    def get_outcome(self, game) -> int:
-        if len(self.get_legal_moves()) == 0 and self.check_win() == 0:
-            return 3
-        return 1 if self.check_win() == 1 else 2
-    
     def back_propagate(self, node: Node, turn: int, outcome: int) -> None:
 
         # For the current player, not the next player
@@ -84,16 +81,16 @@ class MCTS:
             node.N += 1
             node.Q += reward
             node = node.parent
-            if outcome == 3:
+            if outcome == GameMeta.OUTCOMES['draw']:
                 reward = 0
             else:
                 reward = 1 - reward
 
-    def search(self, time_limit: int):
+    def search(self):
         start_time = time.process_time()
 
         num_rollouts = 0
-        while time.process_time() - start_time < time_limit:
+        while time.process_time() - start_time < self.limit_run_time:
             node, state = self.select_node()
             outcome = self.roll_out(state)
             self.back_propagate(node, state.to_play, outcome)
@@ -124,8 +121,3 @@ class MCTS:
 
     def statistics(self) -> tuple:
         return self.num_rollouts, self.run_time
-
-    def get_move(self, state, player):
-        mcts = MCTS(state)
-        mcts.search(8)
-        return mcts.best_move()
