@@ -1,155 +1,131 @@
-import math
 import random
-#import numpy as np
+import time
+import math
+from copy import deepcopy
 from const import *
 
 
 class Node:
-    def __init__(self, state, parent=None):
-        self.state = state
+    def __init__(self, move, parent):
+        self.move = move
         self.parent = parent
-        self.children = []
-        self.visits = 0
-        self.score = 0
+        self.N = 0
+        self.Q = 0
+        self.children = {}
+        self.outcome = 0
 
-    def add_child(self, child_state):
-        child = Node(child_state, self)
-        self.children.append(child)
-        return child
+    def add_children(self, children: dict) -> None:
+        for child in children:
+            self.children[child.move] = child
 
-    def update(self, score):
-        self.score += score
-        self.visits += 1
-
-    def fully_expanded(self):
-        return len(self.children) == len(self.state.get_legal_moves())
-
-    def __repr__(self):
-        return f"{self.score / self.visits if self.visits != 0 else math.inf}, {self.score}, {self.visits}"
-
-
-class MonteCarlo:
-    def __init__(self, state):
-        self.root = Node(state)
-
-    def evaluate(self, board, player):
-        score = 0
-        for r in range(ROW_COUNT):
-            row_array = [int(i) for i in list(board[r])]
-            for c in range(COLUMN_COUNT - 3):
-                window = row_array[c : c + 4]
-                score += self.evaluate_window(window, player)
-
-        for c in range(COLUMN_COUNT):
-            col_array = [board[i][c] for i in range(ROW_COUNT)]
-            for r in range(ROW_COUNT - 3):
-                window = col_array[r : r + 4]
-                score += self.evaluate_window(window, player)        
-
-        for r in range(ROW_COUNT - 3):
-            for c in range(COLUMN_COUNT - 3):
-                window = [board[r + i][c + i] for i in range(4)]
-                score += self.evaluate_window(window, player)
-
-        for r in range(ROW_COUNT - 3):
-            for c in range(COLUMN_COUNT - 3):
-                window = [board[r + 3 - i][c + i] for i in range(4)]
-                score += self.evaluate_window(window, player)        
-      
-        return score
-    
-    def evaluate_window(self, window, piece):
-        """
-        Evaluates the score of a portion of the board
-        :param window: portion of the board with all the pieces that have been placed
-        :param piece: 1 or -1 depending on whose turn it is
-        :return: score of the window
-        """
-        opp_piece = self.get_opponent(piece)
-
-        if window.count(EMPTY) > 2:
-            return 0
-        if window.count(piece) > 0 and window.count(opp_piece) > 0:
-            return 0
-        
-        if window.count(EMPTY) == 2 :
-            if window.count(piece) == 2:
-                return 15
-            else:
-                return -15
-        if window.count(EMPTY) == 1 :
-            if window.count(piece) == 3:
-                return 50
-            else:
-                return -50
-            
-        if window.count(piece) == 4:
-            return float('inf')
-        if window.count(opp_piece) == 4:
-            return float('-inf')
-    
-    def get_opponent(self, player):
-        return 3 - player
-
-    def search(self, num_iterations):
-        for i in range(num_iterations):
-            node = self.root
-            state = self.root.state.copy()
-
-            # selection
-            while node.fully_expanded() and node.children:
-                node = self.select_child(node)
-                state.play_move(node.state.last_move)
-                
-            # expansion
-            if not node.fully_expanded():
-                move = random.choice(list(set(state.get_legal_moves()) - set([child.state.last_move for child in node.children])))
-                if isinstance(move, tuple):
-                    col = move[0]
-                else:
-                    col = move
-                state.play_move(col)
-
-
-                node = node.add_child(state)
-
-            # simulation
-            while not state.is_terminal() and state.get_legal_moves() != []:
-                state.play_move(random.choice(state.get_legal_moves()))
-
-            # backpropagation
-            while node is not None:
-                node.update(self.evaluate(state.board, self.root.state.current_player))
-                node = node.parent
-
-    def select_child(self, node):
-        total_visits = sum(child.visits for child in node.children)
-        ucb_scores = [self.ucb_score(child, total_visits) for child in node.children]
-        return node.children[ucb_scores.index(max(ucb_scores))]
-
-    def ucb_score(self, node, parent_visits):
-        exploitation = node.score / node.visits if node.visits != 0 else math.inf
-        exploration = math.sqrt(math.log(parent_visits) / node.visits) if node.visits != 0 else math.inf
-        return exploitation + 2 * exploration
-
-    def best_child(self):
-        children = sorted(self.root.children, key=lambda child: child.visits, reverse=True)
-        return self.select_child(self.root)
+    def value(self, explore: float = EXPLORATION):
+        if self.N == 0:
+            return 0 if explore == 0 else float('inf')
+        else:
+            return self.Q / self.N + explore * math.sqrt(math.log(self.parent.N) / self.N)
 
 
 class MCTS:
-    def __init__(self, player, profondeur):
-        self.player = player
-        self._profondeur = profondeur
+    def __init__(self, game):
+        self.root_state = deepcopy(game)
+        self.root = Node(None, None)
+        self.run_time = 0
+        self.node_count = 0
+        self.num_rollouts = 0
+
+    def select_node(self) -> tuple:
+        node = self.root
+        state = deepcopy(self.root_state)
+
+        while len(node.children) != 0:
+            children = node.children.values()
+            max_value = max(children, key=lambda n: n.value()).value()
+            max_nodes = [n for n in children if n.value() == max_value]
+
+            node = random.choice(max_nodes)
+            state.move(node.move)
+
+            if node.N == 0:
+                return node, state
+
+        if self.expand(node, state):
+            node = random.choice(list(node.children.values()))
+            state.move(node.move)
+
+        return node, state
+
+    def expand(self, parent: Node, game) -> bool:
+        if game.game_over:
+            return False
+
+        children = [Node(move, parent) for move in game.get_legal_moves()]
+        parent.add_children(children)
+
+        return True
+
+        
+    def roll_out(self, game) -> int:
+        while not game.game_over():
+            game.move(random.choice(game.get_legal_moves()))
+
+        return self.get_outcome(game)
+
+    def get_outcome(self, game) -> int:
+        if len(self.get_legal_moves()) == 0 and self.check_win() == 0:
+            return 3
+        return 1 if self.check_win() == 1 else 2
+    
+    def back_propagate(self, node: Node, turn: int, outcome: int) -> None:
+
+        # For the current player, not the next player
+        reward = 0 if outcome == turn else 1
+
+        while node is not None:
+            node.N += 1
+            node.Q += reward
+            node = node.parent
+            if outcome == 3:
+                reward = 0
+            else:
+                reward = 1 - reward
+
+    def search(self, time_limit: int):
+        start_time = time.process_time()
+
+        num_rollouts = 0
+        while time.process_time() - start_time < time_limit:
+            node, state = self.select_node()
+            outcome = self.roll_out(state)
+            self.back_propagate(node, state.to_play, outcome)
+            num_rollouts += 1
+
+        run_time = time.process_time() - start_time
+        self.run_time = run_time
+        self.num_rollouts = num_rollouts
+
+    def best_move(self):
+        if self.root_state.game_over():
+            return -1
+
+        max_value = max(self.root.children.values(), key=lambda n: n.N).N
+        max_nodes = [n for n in self.root.children.values() if n.N == max_value]
+        best_child = random.choice(max_nodes)
+
+        return best_child.move
+
+    def move(self, move):
+        if move in self.root.children:
+            self.root_state.move(move)
+            self.root = self.root.children[move]
+            return
+
+        self.root_state.move(move)
+        self.root = Node(None, None)
+
+    def statistics(self) -> tuple:
+        return self.num_rollouts, self.run_time
 
     def get_move(self, state, player):
-        mcts = MonteCarlo(state)
-        mcts.search(self._profondeur)
-
-        if self.player == 1:
-            return mcts.best_child().state.last_move
-        else:
-            return mcts.best_child().state.last_move - 1
-
-    def print_type(self):
-        print("MCTS")
+        mcts = MCTS(state)
+        mcts.search(8)
+        return mcts.best_move()
