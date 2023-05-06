@@ -43,8 +43,9 @@ def play_games(args):
             executor.shutdown()
 
     # afficher les résultats
-    print(f"Nombre de victoires du joueur 1 ({args.player_1}) : {results['player_1']} Win rate : {results['player_1']/args.num_games*100}%")
-    print(f"Nombre de victoires du joueur 2 ({args.player_2}) : {results['player_2']} Win rate : {results['player_2']/args.num_games*100}%")
+    print(f"Résultats (nb game = {args.num_games}) :")
+    print(f"Nombre de victoires du joueur 1 ({args.player_1} = {args.depth_player_1}) : {results['player_1']} Win rate : {results['player_1']/args.num_games*100}%")
+    print(f"Nombre de victoires du joueur 2 ({args.player_2} = {args.depth_player_2}) : {results['player_2']} Win rate : {results['player_2']/args.num_games*100}%")
     
 
 if __name__ == '__main__':

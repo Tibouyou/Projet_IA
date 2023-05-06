@@ -1,0 +1,132 @@
+
+COMMANDES SUR WINDOWS POUR STAT ALPHABETA VS ALPHABETA :
+
+python .\main_console.py -p1 alphabeta -p2 alphabeta -d1 0 -d2 0 -c --num_games 1000 >>log.txt &
+python .\main_console.py -p1 alphabeta -p2 alphabeta -d1 0 -d2 1 -c --num_games 1000 >>log.txt &
+python .\main_console.py -p1 alphabeta -p2 alphabeta -d1 0 -d2 2 -c --num_games 1000 >>log.txt &
+python .\main_console.py -p1 alphabeta -p2 alphabeta -d1 0 -d2 3 -c --num_games 1000 >>log.txt &
+python .\main_console.py -p1 alphabeta -p2 alphabeta -d1 0 -d2 4 -c --num_games 1000 >>log.txt &
+python .\main_console.py -p1 alphabeta -p2 alphabeta -d1 1 -d2 0 -c --num_games 1000 >>log.txt &
+python .\main_console.py -p1 alphabeta -p2 alphabeta -d1 1 -d2 1 -c --num_games 1000 >>log.txt &
+python .\main_console.py -p1 alphabeta -p2 alphabeta -d1 1 -d2 2 -c --num_games 1000 >>log.txt &
+python .\main_console.py -p1 alphabeta -p2 alphabeta -d1 1 -d2 3 -c --num_games 500 >>log.txt &
+python .\main_console.py -p1 alphabeta -p2 alphabeta -d1 1 -d2 4 -c --num_games 500 >>log.txt &
+python .\main_console.py -p1 alphabeta -p2 alphabeta -d1 2 -d2 0 -c --num_games 1000 >>log.txt &
+python .\main_console.py -p1 alphabeta -p2 alphabeta -d1 2 -d2 1 -c --num_games 1000 >>log.txt &
+python .\main_console.py -p1 alphabeta -p2 alphabeta -d1 2 -d2 2 -c --num_games 1000 >>log.txt &
+python .\main_console.py -p1 alphabeta -p2 alphabeta -d1 2 -d2 3 -c --num_games 500 >>log.txt &
+python .\main_console.py -p1 alphabeta -p2 alphabeta -d1 2 -d2 4 -c --num_games 400 >>log.txt &
+python .\main_console.py -p1 alphabeta -p2 alphabeta -d1 3 -d2 0 -c --num_games 500 >>log.txt &
+python .\main_console.py -p1 alphabeta -p2 alphabeta -d1 3 -d2 1 -c --num_games 500 >>log.txt &
+python .\main_console.py -p1 alphabeta -p2 alphabeta -d1 3 -d2 2 -c --num_games 500 >>log.txt &
+python .\main_console.py -p1 alphabeta -p2 alphabeta -d1 3 -d2 3 -c --num_games 400 >>log.txt &
+python .\main_console.py -p1 alphabeta -p2 alphabeta -d1 3 -d2 4 -c --num_games 300 >>log.txt &
+python .\main_console.py -p1 alphabeta -p2 alphabeta -d1 4 -d2 0 -c --num_games 500 >>log.txt &
+python .\main_console.py -p1 alphabeta -p2 alphabeta -d1 4 -d2 1 -c --num_games 500 >>log.txt &
+python .\main_console.py -p1 alphabeta -p2 alphabeta -d1 4 -d2 2 -c --num_games 500 >>log.txt &
+python .\main_console.py -p1 alphabeta -p2 alphabeta -d1 4 -d2 3 -c --num_games 300 >>log.txt &
+python .\main_console.py -p1 alphabeta -p2 alphabeta -d1 4 -d2 4 -c --num_games 250 >>log.txt
+
+
+RESULTATS :
+
+Mode parall�le
+R�sultats (nb game = 1000) :
+Nombre de victoires du joueur 1 (alphabeta = 0) : 474 Win rate : 47.4%
+Nombre de victoires du joueur 2 (alphabeta = 0) : 525 Win rate : 52.5%
+Mode parall�le
+R�sultats (nb game = 1000) :
+Nombre de victoires du joueur 1 (alphabeta = 0) : 138 Win rate : 13.8%
+Nombre de victoires du joueur 2 (alphabeta = 1) : 859 Win rate : 85.9%
+Mode parall�le
+R�sultats (nb game = 1000) :
+Nombre de victoires du joueur 1 (alphabeta = 0) : 193 Win rate : 19.3%
+Nombre de victoires du joueur 2 (alphabeta = 2) : 801 Win rate : 80.10000000000001%
+Mode parall�le
+R�sultats (nb game = 1000) :
+Nombre de victoires du joueur 1 (alphabeta = 0) : 37 Win rate : 3.6999999999999997%
+Nombre de victoires du joueur 2 (alphabeta = 3) : 959 Win rate : 95.89999999999999%
+Mode parall�le
+Results (nb game = 500)
+Nombre de victoires du joueur 1 (alphabeta = 0) : 0 Win rate : 0.0%
+Nombre de victoires du joueur 2 (alphabeta = 4) : 500 Win rate : 100.0%
+Mode parall�le
+Results (nb game = 1000)
+Nombre de victoires du joueur 1 (alphabeta = 1) : 900 Win rate : 90.0%
+Nombre de victoires du joueur 2 (alphabeta = 0) : 82 Win rate : 8.200000000000001%
+Mode parall�le
+Results (nb game = 1000)
+Nombre de victoires du joueur 1 (alphabeta = 1) : 388 Win rate : 38.800000000000004%
+Nombre de victoires du joueur 2 (alphabeta = 1) : 459 Win rate : 45.9%
+Mode parall�le
+Results (nb game = 1000)
+Nombre de victoires du joueur 1 (alphabeta = 1) : 457 Win rate : 45.7%
+Nombre de victoires du joueur 2 (alphabeta = 2) : 479 Win rate : 47.9%
+Mode parall�le
+Results (nb game = 500)
+Nombre de victoires du joueur 1 (alphabeta = 1) : 161 Win rate : 32.2%
+Nombre de victoires du joueur 2 (alphabeta = 3) : 297 Win rate : 59.4%
+Mode parall�le
+R�sultats (nb game = 500) :
+Nombre de victoires du joueur 1 (alphabeta = 1) : 54 Win rate : 10.8%
+Nombre de victoires du joueur 2 (alphabeta = 4) : 439 Win rate : 87.8%
+Mode parall�le
+R�sultats (nb game = 1000) :
+Nombre de victoires du joueur 1 (alphabeta = 2) : 903 Win rate : 90.3%
+Nombre de victoires du joueur 2 (alphabeta = 0) : 94 Win rate : 9.4%
+Mode parall�le
+R�sultats (nb game = 1000) :
+Nombre de victoires du joueur 1 (alphabeta = 2) : 551 Win rate : 55.1%
+Nombre de victoires du joueur 2 (alphabeta = 1) : 376 Win rate : 37.6%
+Mode parall�le
+R�sultats (nb game = 1000) :
+Nombre de victoires du joueur 1 (alphabeta = 2) : 400 Win rate : 40.0%
+Nombre de victoires du joueur 2 (alphabeta = 2) : 571 Win rate : 57.099999999999994%
+Mode parall�le
+R�sultats (nb game = 500) :
+Nombre de victoires du joueur 1 (alphabeta = 2) : 116 Win rate : 23.200000000000003%
+Nombre de victoires du joueur 2 (alphabeta = 3) : 359 Win rate : 71.8%
+Mode parall�le
+R�sultats (nb game = 400) :
+Nombre de victoires du joueur 1 (alphabeta = 2) : 35 Win rate : 8.75%
+Nombre de victoires du joueur 2 (alphabeta = 4) : 359 Win rate : 89.75%
+Mode parall�le
+R�sultats (nb game = 500) :
+Nombre de victoires du joueur 1 (alphabeta = 3) : 490 Win rate : 98.0%
+Nombre de victoires du joueur 2 (alphabeta = 0) : 10 Win rate : 2.0%
+Mode parall�le
+R�sultats (nb game = 500) :
+Nombre de victoires du joueur 1 (alphabeta = 3) : 372 Win rate : 74.4%
+Nombre de victoires du joueur 2 (alphabeta = 1) : 94 Win rate : 18.8%
+Mode parall�le
+R�sultats (nb game = 500) :
+Nombre de victoires du joueur 1 (alphabeta = 3) : 403 Win rate : 80.60000000000001%
+Nombre de victoires du joueur 2 (alphabeta = 2) : 56 Win rate : 11.200000000000001%
+Mode parall�le
+R�sultats (nb game = 400) :
+Nombre de victoires du joueur 1 (alphabeta = 3) : 315 Win rate : 78.75%
+Nombre de victoires du joueur 2 (alphabeta = 3) : 67 Win rate : 16.75%
+Mode parall�le
+R�sultats (nb game = 300) :
+Nombre de victoires du joueur 1 (alphabeta = 3) : 12 Win rate : 4.0%
+Nombre de victoires du joueur 2 (alphabeta = 4) : 207 Win rate : 69.0%
+Mode parall�le
+R�sultats (nb game = 500) :
+Nombre de victoires du joueur 1 (alphabeta = 4) : 472 Win rate : 94.39999999999999%
+Nombre de victoires du joueur 2 (alphabeta = 0) : 28 Win rate : 5.6000000000000005%
+Mode parall�le
+R�sultats (nb game = 500) :
+Nombre de victoires du joueur 1 (alphabeta = 4) : 472 Win rate : 94.39999999999999%
+Nombre de victoires du joueur 2 (alphabeta = 1) : 26 Win rate : 5.2%
+Mode parall�le
+R�sultats (nb game = 500) :
+Nombre de victoires du joueur 1 (alphabeta = 4) : 410 Win rate : 82.0%
+Nombre de victoires du joueur 2 (alphabeta = 2) : 68 Win rate : 13.600000000000001%
+Mode parall�le
+R�sultats (nb game = 300) :
+Nombre de victoires du joueur 1 (alphabeta = 4) : 154 Win rate : 51.33333333333333%
+Nombre de victoires du joueur 2 (alphabeta = 3) : 140 Win rate : 46.666666666666664%
+Mode parall�le
+R�sultats (nb game = 250) :
+Nombre de victoires du joueur 1 (alphabeta = 4) : 16 Win rate : 6.4%
+Nombre de victoires du joueur 2 (alphabeta = 4) : 130 Win rate : 52.0%
