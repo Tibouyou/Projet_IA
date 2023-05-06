@@ -197,7 +197,7 @@ class Connect4Console:
                     if self._show_board:
                         self.game.print_board()
             else:
-                print("Tiens, tiens, tiens... Il semblerait que les colonnes sont pleine.")
+                #print("Tiens, tiens, tiens... Il semblerait que les colonnes sont pleine.")
                 self.game.game_over = True
                 self.game.current_player = None
 

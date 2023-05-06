@@ -18,7 +18,7 @@ def play_games(args):
     # initialiser les résultats
     results = {'player_1': 0, 'player_2': 0}
 
-    if(args.num_games == 1 or args.player_1 == "human" or args.player_2 == "human" or args.interface == "graphique" or args.max_workers == 1 ):
+    if(args.num_games == 1 or args.player_1 == "human" or args.player_2 == "human" or args.max_workers == 1 ):
         print ("Mode séquentiel")
         for i in range(args.num_games):
             play_game(args.player_1, args.player_2, args.hide_board, args.depth_player_1, args.depth_player_2, results)
@@ -51,9 +51,9 @@ if __name__ == '__main__':
     parser = argparse.ArgumentParser()
     parser.add_argument("-p1","--player_1", help="player 1 : minimax / alphabeta / mcts / human", default="minimax")
     parser.add_argument("-p2","--player_2", help="player 2 : minimax / alphabeta / mcts / human", default="alphabeta")
-    parser.add_argument("-c","--hide_board", help="Afficher le plateau de jeu", action="store_false")
-    parser.add_argument("-n","--num_games", help="Nombre de parties à jouer en même temps", type=int, default=1)
-    parser.add_argument("-w","--max_workers", help="Nombre de threads utilisé ", type=int, default=6)
+    parser.add_argument("-c" ,"--hide_board", help="Afficher le plateau de jeu", action="store_false")
+    parser.add_argument("-n" ,"--num_games", help="Nombre de parties à jouer en même temps", type=int, default=1)
+    parser.add_argument("-w" ,"--max_workers", help="Nombre de threads utilisé ", type=int, default=6)
     parser.add_argument("-d1","--depth_player_1", help="Profondeur de recherche du joueur 1", type=int, default=3)
     parser.add_argument("-d2","--depth_player_2", help="Profondeur de recherche du joueur 2", type=int, default=5)
     args = parser.parse_args()

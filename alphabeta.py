@@ -1,6 +1,7 @@
 #import numpy as np
 from copy import deepcopy
 from const import *
+from random import randint
 
 class Alphabeta:
     def __init__(self, max_depth):
@@ -19,10 +20,14 @@ class Alphabeta:
             self.make_move(temp_board, move, player)
             score = self.alphabeta(temp_board, self.max_depth, False, player, alpha, beta)
             #print(score,end="|")
-            if score > best_score:
-                best_score = score
-                alpha = score
-                best_move = move
+            if score >= best_score:
+                if score == best_score:
+                    if randint(0,5) == 0:
+                        best_move = move
+                else:
+                    best_score = score
+                    alpha = score
+                    best_move = move
         #print("")
         if best_move == None :
             if valid_moves == [] :
