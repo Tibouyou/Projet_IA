@@ -1,0 +1,126 @@
+python .\main_console.py -p1 minimax -p2 alphabeta -d1 0 -d2 0 -c --num_games 1000 >>log2.txt &
+python .\main_console.py -p1 minimax -p2 alphabeta -d1 0 -d2 1 -c --num_games 1000 >>log2.txt &
+python .\main_console.py -p1 minimax -p2 alphabeta -d1 0 -d2 2 -c --num_games 1000 >>log2.txt &
+python .\main_console.py -p1 minimax -p2 alphabeta -d1 0 -d2 3 -c --num_games 1000 >>log2.txt &
+python .\main_console.py -p1 minimax -p2 alphabeta -d1 0 -d2 4 -c --num_games 1000 >>log2.txt &
+python .\main_console.py -p1 minimax -p2 alphabeta -d1 1 -d2 0 -c --num_games 1000 >>log2.txt &
+python .\main_console.py -p1 minimax -p2 alphabeta -d1 1 -d2 1 -c --num_games 1000 >>log2.txt &
+python .\main_console.py -p1 minimax -p2 alphabeta -d1 1 -d2 2 -c --num_games 1000 >>log2.txt &
+python .\main_console.py -p1 minimax -p2 alphabeta -d1 1 -d2 3 -c --num_games 500 >>log2.txt &
+python .\main_console.py -p1 minimax -p2 alphabeta -d1 1 -d2 4 -c --num_games 500 >>log2.txt &
+python .\main_console.py -p1 minimax -p2 alphabeta -d1 2 -d2 0 -c --num_games 1000 >>log2.txt &
+python .\main_console.py -p1 minimax -p2 alphabeta -d1 2 -d2 1 -c --num_games 1000 >>log2.txt &
+python .\main_console.py -p1 minimax -p2 alphabeta -d1 2 -d2 2 -c --num_games 1000 >>log2.txt &
+python .\main_console.py -p1 minimax -p2 alphabeta -d1 2 -d2 3 -c --num_games 500 >>log2.txt &
+python .\main_console.py -p1 minimax -p2 alphabeta -d1 2 -d2 4 -c --num_games 400 >>log2.txt &
+python .\main_console.py -p1 minimax -p2 alphabeta -d1 3 -d2 0 -c --num_games 500 >>log2.txt &
+python .\main_console.py -p1 minimax -p2 alphabeta -d1 3 -d2 1 -c --num_games 500 >>log2.txt &
+python .\main_console.py -p1 minimax -p2 alphabeta -d1 3 -d2 2 -c --num_games 500 >>log2.txt &
+python .\main_console.py -p1 minimax -p2 alphabeta -d1 3 -d2 3 -c --num_games 400 >>log2.txt &
+python .\main_console.py -p1 minimax -p2 alphabeta -d1 3 -d2 4 -c --num_games 300 >>log2.txt &
+python .\main_console.py -p1 minimax -p2 alphabeta -d1 4 -d2 0 -c --num_games 500 >>log2.txt &
+python .\main_console.py -p1 minimax -p2 alphabeta -d1 4 -d2 1 -c --num_games 500 >>log2.txt &
+python .\main_console.py -p1 minimax -p2 alphabeta -d1 4 -d2 2 -c --num_games 500 >>log2.txt &
+python .\main_console.py -p1 minimax -p2 alphabeta -d1 4 -d2 3 -c --num_games 300 >>log2.txt &
+python .\main_console.py -p1 minimax -p2 alphabeta -d1 4 -d2 4 -c --num_games 250 >>log2.txt
+
+
+RES :
+
+Mode parallï¿½le
+Rï¿½sultats (nb game = 1000) :
+Nombre de victoires du joueur 1 (minimax = 0) : 403 Win rate : 40.300000000000004%
+Nombre de victoires du joueur 2 (alphabeta = 0) : 597 Win rate : 59.699999999999996%
+Mode parallï¿½le
+Rï¿½sultats (nb game = 1000) :
+Nombre de victoires du joueur 1 (minimax = 0) : 62 Win rate : 6.2%
+Nombre de victoires du joueur 2 (alphabeta = 1) : 927 Win rate : 92.7%
+Mode parallï¿½le
+Rï¿½sultats (nb game = 1000) :
+Nombre de victoires du joueur 1 (minimax = 0) : 0 Win rate : 0.0%
+Nombre de victoires du joueur 2 (alphabeta = 2) : 983 Win rate : 98.3%
+Mode parallï¿½le
+Rï¿½sultats (nb game = 1000) :
+Nombre de victoires du joueur 1 (minimax = 0) : 0 Win rate : 0.0%
+Nombre de victoires du joueur 2 (alphabeta = 3) : 1000 Win rate : 100.0%
+Mode parallï¿½le
+Rï¿½sultats (nb game = 1000) :
+Nombre de victoires du joueur 1 (minimax = 0) : 0 Win rate : 0.0%
+Nombre de victoires du joueur 2 (alphabeta = 4) : 1000 Win rate : 100.0%
+Mode parallï¿½le
+Rï¿½sultats (nb game = 1000) :
+Nombre de victoires du joueur 1 (minimax = 1) : 711 Win rate : 71.1%
+Nombre de victoires du joueur 2 (alphabeta = 0) : 0 Win rate : 0.0%
+Mode parallï¿½le
+Rï¿½sultats (nb game = 1000) :
+Nombre de victoires du joueur 1 (minimax = 1) : 373 Win rate : 37.3%
+Nombre de victoires du joueur 2 (alphabeta = 1) : 0 Win rate : 0.0%
+Mode parallï¿½le
+Rï¿½sultats (nb game = 1000) :
+Nombre de victoires du joueur 1 (minimax = 1) : 645 Win rate : 64.5%
+Nombre de victoires du joueur 2 (alphabeta = 2) : 0 Win rate : 0.0%
+Mode parallï¿½le
+Rï¿½sultats (nb game = 500) :
+Nombre de victoires du joueur 1 (minimax = 1) : 135 Win rate : 27.0%
+Nombre de victoires du joueur 2 (alphabeta = 3) : 0 Win rate : 0.0%
+Mode parallï¿½le
+Rï¿½sultats (nb game = 500) :
+Nombre de victoires du joueur 1 (minimax = 1) : 0 Win rate : 0.0%
+Nombre de victoires du joueur 2 (alphabeta = 4) : 0 Win rate : 0.0%
+Mode parallï¿½le
+Rï¿½sultats (nb game = 1000) :
+Nombre de victoires du joueur 1 (minimax = 2) : 875 Win rate : 87.5%
+Nombre de victoires du joueur 2 (alphabeta = 0) : 0 Win rate : 0.0%
+Mode parallï¿½le
+Rï¿½sultats (nb game = 1000) :
+Nombre de victoires du joueur 1 (minimax = 2) : 432 Win rate : 43.2%
+Nombre de victoires du joueur 2 (alphabeta = 1) : 0 Win rate : 0.0%
+Mode parallï¿½le
+Rï¿½sultats (nb game = 1000) :
+Nombre de victoires du joueur 1 (minimax = 2) : 115 Win rate : 11.5%
+Nombre de victoires du joueur 2 (alphabeta = 2) : 0 Win rate : 0.0%
+Mode parallï¿½le
+Rï¿½sultats (nb game = 500) :
+Nombre de victoires du joueur 1 (minimax = 2) : 22 Win rate : 4.3999999999999995%
+Nombre de victoires du joueur 2 (alphabeta = 3) : 0 Win rate : 0.0%
+Mode parallï¿½le
+Rï¿½sultats (nb game = 400) :
+Nombre de victoires du joueur 1 (minimax = 2) : 0 Win rate : 0.0%
+Nombre de victoires du joueur 2 (alphabeta = 4) : 0 Win rate : 0.0%
+Mode parallèle
+Résultats (nb game = 500) :
+Nombre de victoires du joueur 1 (minimax = 3) : 385 Win rate : 77.0%
+Nombre de victoires du joueur 2 (alphabeta = 0) : 0 Win rate : 0.0%
+Mode parallèle
+Résultats (nb game = 500) :
+Nombre de victoires du joueur 1 (minimax = 3) : 132 Win rate : 26.400000000000002%
+Nombre de victoires du joueur 2 (alphabeta = 1) : 0 Win rate : 0.0%
+Mode parallèle
+Résultats (nb game = 500) :
+Nombre de victoires du joueur 1 (minimax = 3) : 395 Win rate : 79.0%
+Nombre de victoires du joueur 2 (alphabeta = 2) : 0 Win rate : 0.0%
+Mode parallèle
+Résultats (nb game = 400) :
+Nombre de victoires du joueur 1 (minimax = 3) : 59 Win rate : 14.75%
+Nombre de victoires du joueur 2 (alphabeta = 3) : 0 Win rate : 0.0%
+Mode parallèle
+Résultats (nb game = 300) :
+Nombre de victoires du joueur 1 (minimax = 3) : 44 Win rate : 14.666666666666666%
+Nombre de victoires du joueur 2 (alphabeta = 4) : 0 Win rate : 0.0%
+Mode parallèle
+Résultats (nb game = 500) :
+Nombre de victoires du joueur 1 (minimax = 4) : 474 Win rate : 94.8%
+Nombre de victoires du joueur 2 (alphabeta = 0) : 0 Win rate : 0.0%
+Mode parallèle
+Résultats (nb game = 500) :
+Nombre de victoires du joueur 1 (minimax = 4) : 389 Win rate : 77.8%
+Nombre de victoires du joueur 2 (alphabeta = 1) : 0 Win rate : 0.0%
+Mode parallèle
+Résultats (nb game = 500) :
+Nombre de victoires du joueur 1 (minimax = 4) : 475 Win rate : 95.0%
+Nombre de victoires du joueur 2 (alphabeta = 2) : 0 Win rate : 0.0%
+Mode parallèle
+Résultats (nb game = 300) :
+Nombre de victoires du joueur 1 (minimax = 4) : 204 Win rate : 68.0%
+Nombre de victoires du joueur 2 (alphabeta = 3) : 0 Win rate : 0.0%
+Mode parallèle
