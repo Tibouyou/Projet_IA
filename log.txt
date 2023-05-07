@@ -139,57 +139,18 @@ python .\main_console.py -p1 minimax -p2 minimax -d1 0 -d2 0 -c --num_games 1000
 python .\main_console.py -p1 minimax -p2 minimax -d1 0 -d2 1 -c --num_games 1000 >>log.txt &
 python .\main_console.py -p1 minimax -p2 minimax -d1 0 -d2 2 -c --num_games 1000 >>log.txt &
 python .\main_console.py -p1 minimax -p2 minimax -d1 0 -d2 3 -c --num_games 1000 >>log.txt &
-python .\main_console.py -p1 minimax -p2 minimax -d1 0 -d2 4 -c --num_games 1000 >>log.txt &
 python .\main_console.py -p1 minimax -p2 minimax -d1 1 -d2 0 -c --num_games 1000 >>log.txt &
 python .\main_console.py -p1 minimax -p2 minimax -d1 1 -d2 1 -c --num_games 1000 >>log.txt &
 python .\main_console.py -p1 minimax -p2 minimax -d1 1 -d2 2 -c --num_games 1000 >>log.txt &
 python .\main_console.py -p1 minimax -p2 minimax -d1 1 -d2 3 -c --num_games 500 >>log.txt &
-python .\main_console.py -p1 minimax -p2 minimax -d1 1 -d2 4 -c --num_games 500 >>log.txt &
 python .\main_console.py -p1 minimax -p2 minimax -d1 2 -d2 0 -c --num_games 1000 >>log.txt &
 python .\main_console.py -p1 minimax -p2 minimax -d1 2 -d2 1 -c --num_games 1000 >>log.txt &
 python .\main_console.py -p1 minimax -p2 minimax -d1 2 -d2 2 -c --num_games 1000 >>log.txt &
 python .\main_console.py -p1 minimax -p2 minimax -d1 2 -d2 3 -c --num_games 500 >>log.txt &
-python .\main_console.py -p1 minimax -p2 minimax -d1 2 -d2 4 -c --num_games 400 >>log.txt &
 python .\main_console.py -p1 minimax -p2 minimax -d1 3 -d2 0 -c --num_games 500 >>log.txt &
 python .\main_console.py -p1 minimax -p2 minimax -d1 3 -d2 1 -c --num_games 500 >>log.txt &
 python .\main_console.py -p1 minimax -p2 minimax -d1 3 -d2 2 -c --num_games 500 >>log.txt &
-python .\main_console.py -p1 minimax -p2 minimax -d1 3 -d2 3 -c --num_games 400 >>log.txt &
-python .\main_console.py -p1 minimax -p2 minimax -d1 3 -d2 4 -c --num_games 300 >>log.txt &
-python .\main_console.py -p1 minimax -p2 minimax -d1 4 -d2 0 -c --num_games 500 >>log.txt &
-python .\main_console.py -p1 minimax -p2 minimax -d1 4 -d2 1 -c --num_games 500 >>log.txt &
-python .\main_console.py -p1 minimax -p2 minimax -d1 4 -d2 2 -c --num_games 500 >>log.txt &
-python .\main_console.py -p1 minimax -p2 minimax -d1 4 -d2 3 -c --num_games 300 >>log.txt &
-python .\main_console.py -p1 minimax -p2 minimax -d1 4 -d2 4 -c --num_games 250 >>log.txt
-
-
-COMMANDES SUR WINDOWS POUR STAT MINIMAX VS ALPHABETA :
-
-
-python .\main_console.py -p1 minimax -p2 alphabeta -d1 0 -d2 0 -c --num_games 1000 >>log.txt &
-python .\main_console.py -p1 minimax -p2 alphabeta -d1 0 -d2 1 -c --num_games 1000 >>log.txt &
-python .\main_console.py -p1 minimax -p2 alphabeta -d1 0 -d2 2 -c --num_games 1000 >>log.txt &
-python .\main_console.py -p1 minimax -p2 alphabeta -d1 0 -d2 3 -c --num_games 1000 >>log.txt &
-python .\main_console.py -p1 minimax -p2 alphabeta -d1 0 -d2 4 -c --num_games 1000 >>log.txt &
-python .\main_console.py -p1 minimax -p2 alphabeta -d1 1 -d2 0 -c --num_games 1000 >>log.txt &
-python .\main_console.py -p1 minimax -p2 alphabeta -d1 1 -d2 1 -c --num_games 1000 >>log.txt &
-python .\main_console.py -p1 minimax -p2 alphabeta -d1 1 -d2 2 -c --num_games 1000 >>log.txt &
-python .\main_console.py -p1 minimax -p2 alphabeta -d1 1 -d2 3 -c --num_games 500 >>log.txt &
-python .\main_console.py -p1 minimax -p2 alphabeta -d1 1 -d2 4 -c --num_games 500 >>log.txt &
-python .\main_console.py -p1 minimax -p2 alphabeta -d1 2 -d2 0 -c --num_games 1000 >>log.txt &
-python .\main_console.py -p1 minimax -p2 alphabeta -d1 2 -d2 1 -c --num_games 1000 >>log.txt &
-python .\main_console.py -p1 minimax -p2 alphabeta -d1 2 -d2 2 -c --num_games 1000 >>log.txt &
-python .\main_console.py -p1 minimax -p2 alphabeta -d1 2 -d2 3 -c --num_games 500 >>log.txt &
-python .\main_console.py -p1 minimax -p2 alphabeta -d1 2 -d2 4 -c --num_games 400 >>log.txt &
-python .\main_console.py -p1 minimax -p2 alphabeta -d1 3 -d2 0 -c --num_games 500 >>log.txt &
-python .\main_console.py -p1 minimax -p2 alphabeta -d1 3 -d2 1 -c --num_games 500 >>log.txt &
-python .\main_console.py -p1 minimax -p2 alphabeta -d1 3 -d2 2 -c --num_games 500 >>log.txt &
-python .\main_console.py -p1 minimax -p2 alphabeta -d1 3 -d2 3 -c --num_games 400 >>log.txt &
-python .\main_console.py -p1 minimax -p2 alphabeta -d1 3 -d2 4 -c --num_games 300 >>log.txt &
-python .\main_console.py -p1 minimax -p2 alphabeta -d1 4 -d2 0 -c --num_games 500 >>log.txt &
-python .\main_console.py -p1 minimax -p2 alphabeta -d1 4 -d2 1 -c --num_games 500 >>log.txt &
-python .\main_console.py -p1 minimax -p2 alphabeta -d1 4 -d2 2 -c --num_games 500 >>log.txt &
-python .\main_console.py -p1 minimax -p2 alphabeta -d1 4 -d2 3 -c --num_games 300 >>log.txt &
-python .\main_console.py -p1 minimax -p2 alphabeta -d1 4 -d2 4 -c --num_games 250 >>log.txt
+python .\main_console.py -p1 minimax -p2 minimax -d1 3 -d2 3 -c --num_games 400 >>log.txt
 
 
 RESULTATS POUR STAT MINIMAX VS MINIMAX :
@@ -211,48 +172,36 @@ Nombre de victoires du joueur 1 (minimax = 0) : 0 Win rate : 0.0%
 Nombre de victoires du joueur 2 (minimax = 3) : 1000 Win rate : 100.0%
 Mode parall�le
 R�sultats (nb game = 1000) :
-Nombre de victoires du joueur 1 (minimax = 0) : 0 Win rate : 0.0%
-Nombre de victoires du joueur 2 (minimax = 4) : 1000 Win rate : 100.0%
-Mode parall�le
-R�sultats (nb game = 1000) :
 Nombre de victoires du joueur 1 (minimax = 1) : 1000 Win rate : 100.0%
 Nombre de victoires du joueur 2 (minimax = 0) : 0 Win rate : 0.0%
 Mode parall�le
 R�sultats (nb game = 1000) :
 Nombre de victoires du joueur 1 (minimax = 1) : 0 Win rate : 0.0%
-Nombre de victoires du joueur 2 (minimax = 1) : 0 Win rate : 0.0%
+Nombre de victoires du joueur 2 (minimax = 1) : 1000 Win rate : 100.0%
 Mode parall�le
 R�sultats (nb game = 1000) :
 Nombre de victoires du joueur 1 (minimax = 1) : 0 Win rate : 0.0%
-Nombre de victoires du joueur 2 (minimax = 2) : 0 Win rate : 0.0%
+Nombre de victoires du joueur 2 (minimax = 2) : 1000 Win rate : 100.0%
 Mode parall�le
 R�sultats (nb game = 500) :
-Nombre de victoires du joueur 1 (minimax = 1) : 0 Win rate : 0.0%
+Nombre de victoires du joueur 1 (minimax = 1) : 500 Win rate : 100.0%
 Nombre de victoires du joueur 2 (minimax = 3) : 0 Win rate : 0.0%
 Mode parall�le
-R�sultats (nb game = 500) :
-Nombre de victoires du joueur 1 (minimax = 1) : 0 Win rate : 0.0%
-Nombre de victoires du joueur 2 (minimax = 4) : 0 Win rate : 0.0%
-Mode parall�le
 R�sultats (nb game = 1000) :
 Nombre de victoires du joueur 1 (minimax = 2) : 0 Win rate : 0.0%
-Nombre de victoires du joueur 2 (minimax = 0) : 0 Win rate : 0.0%
+Nombre de victoires du joueur 2 (minimax = 0) : 1000 Win rate : 100.0%
 Mode parall�le
 R�sultats (nb game = 1000) :
-Nombre de victoires du joueur 1 (minimax = 2) : 0 Win rate : 0.0%
+Nombre de victoires du joueur 1 (minimax = 2) : 1000 Win rate : 100.0%
 Nombre de victoires du joueur 2 (minimax = 1) : 0 Win rate : 0.0%
 Mode parall�le
 R�sultats (nb game = 1000) :
 Nombre de victoires du joueur 1 (minimax = 2) : 0 Win rate : 0.0%
-Nombre de victoires du joueur 2 (minimax = 2) : 0 Win rate : 0.0%
+Nombre de victoires du joueur 2 (minimax = 2) : 1000 Win rate : 100.0%
 Mode parall�le
 R�sultats (nb game = 500) :
 Nombre de victoires du joueur 1 (minimax = 2) : 0 Win rate : 0.0%
-Nombre de victoires du joueur 2 (minimax = 3) : 0 Win rate : 0.0%
-Mode parall�le
-R�sultats (nb game = 400) :
-Nombre de victoires du joueur 1 (minimax = 2) : 0 Win rate : 0.0%
-Nombre de victoires du joueur 2 (minimax = 4) : 0 Win rate : 0.0%
+Nombre de victoires du joueur 2 (minimax = 3) : 500 Win rate : 100.0%
 Mode parall�le
 R�sultats (nb game = 500) :
 Nombre de victoires du joueur 1 (minimax = 3) : 500 Win rate : 100.0%
@@ -260,32 +209,124 @@ Nombre de victoires du joueur 2 (minimax = 0) : 0 Win rate : 0.0%
 Mode parall�le
 R�sultats (nb game = 500) :
 Nombre de victoires du joueur 1 (minimax = 3) : 0 Win rate : 0.0%
-Nombre de victoires du joueur 2 (minimax = 1) : 0 Win rate : 0.0%
+Nombre de victoires du joueur 2 (minimax = 1) : 500 Win rate : 100.0%
 Mode parall�le
 R�sultats (nb game = 500) :
-Nombre de victoires du joueur 1 (minimax = 3) : 0 Win rate : 0.0%
+Nombre de victoires du joueur 1 (minimax = 3) : 500 Win rate : 100.0%
 Nombre de victoires du joueur 2 (minimax = 2) : 0 Win rate : 0.0%
 Mode parall�le
 R�sultats (nb game = 400) :
-Nombre de victoires du joueur 1 (minimax = 3) : 0 Win rate : 0.0%
+Nombre de victoires du joueur 1 (minimax = 3) : 400 Win rate : 100.0%
 Nombre de victoires du joueur 2 (minimax = 3) : 0 Win rate : 0.0%
+
+
+
+COMMANDES SUR WINDOWS POUR STAT MINIMAX VS ALPHABETA :
+
+
+python .\main_console.py -p1 minimax -p2 alphabeta -d1 0 -d2 0 -c --num_games 1000 >>log2.txt &
+python .\main_console.py -p1 minimax -p2 alphabeta -d1 0 -d2 1 -c --num_games 1000 >>log2.txt &
+python .\main_console.py -p1 minimax -p2 alphabeta -d1 0 -d2 2 -c --num_games 1000 >>log2.txt &
+python .\main_console.py -p1 minimax -p2 alphabeta -d1 0 -d2 3 -c --num_games 1000 >>log2.txt &
+python .\main_console.py -p1 minimax -p2 alphabeta -d1 0 -d2 4 -c --num_games 1000 >>log2.txt &
+python .\main_console.py -p1 minimax -p2 alphabeta -d1 1 -d2 0 -c --num_games 1000 >>log2.txt &
+python .\main_console.py -p1 minimax -p2 alphabeta -d1 1 -d2 1 -c --num_games 1000 >>log2.txt &
+python .\main_console.py -p1 minimax -p2 alphabeta -d1 1 -d2 2 -c --num_games 1000 >>log2.txt &
+python .\main_console.py -p1 minimax -p2 alphabeta -d1 1 -d2 3 -c --num_games 500 >>log2.txt &
+python .\main_console.py -p1 minimax -p2 alphabeta -d1 1 -d2 4 -c --num_games 500 >>log2.txt &
+python .\main_console.py -p1 minimax -p2 alphabeta -d1 2 -d2 0 -c --num_games 1000 >>log2.txt &
+python .\main_console.py -p1 minimax -p2 alphabeta -d1 2 -d2 1 -c --num_games 1000 >>log2.txt &
+python .\main_console.py -p1 minimax -p2 alphabeta -d1 2 -d2 2 -c --num_games 1000 >>log2.txt &
+python .\main_console.py -p1 minimax -p2 alphabeta -d1 2 -d2 3 -c --num_games 500 >>log2.txt &
+python .\main_console.py -p1 minimax -p2 alphabeta -d1 2 -d2 4 -c --num_games 400 >>log2.txt &
+python .\main_console.py -p1 minimax -p2 alphabeta -d1 3 -d2 0 -c --num_games 500 >>log2.txt &
+python .\main_console.py -p1 minimax -p2 alphabeta -d1 3 -d2 1 -c --num_games 500 >>log2.txt &
+python .\main_console.py -p1 minimax -p2 alphabeta -d1 3 -d2 2 -c --num_games 500 >>log2.txt &
+python .\main_console.py -p1 minimax -p2 alphabeta -d1 3 -d2 3 -c --num_games 400 >>log2.txt &
+python .\main_console.py -p1 minimax -p2 alphabeta -d1 3 -d2 4 -c --num_games 300 >>log2.txt
+
+
+
+RESULTATS POUR STAT MINIMAX VS ALPHABETA :
+
+
+Mode parall�le
+R�sultats (nb game = 1000) :
+Nombre de victoires du joueur 1 (minimax = 0) : 428 Win rate : 42.8%
+Nombre de victoires du joueur 2 (alphabeta = 0) : 572 Win rate : 57.199999999999996%
+Mode parall�le
+R�sultats (nb game = 1000) :
+Nombre de victoires du joueur 1 (minimax = 0) : 52 Win rate : 5.2%
+Nombre de victoires du joueur 2 (alphabeta = 1) : 944 Win rate : 94.39999999999999%
+Mode parall�le
+R�sultats (nb game = 1000) :
+Nombre de victoires du joueur 1 (minimax = 0) : 0 Win rate : 0.0%
+Nombre de victoires du joueur 2 (alphabeta = 2) : 979 Win rate : 97.89999999999999%
+Mode parall�le
+R�sultats (nb game = 1000) :
+Nombre de victoires du joueur 1 (minimax = 0) : 0 Win rate : 0.0%
+Nombre de victoires du joueur 2 (alphabeta = 3) : 1000 Win rate : 100.0%
+Mode parall�le
+R�sultats (nb game = 1000) :
+Nombre de victoires du joueur 1 (minimax = 0) : 0 Win rate : 0.0%
+Nombre de victoires du joueur 2 (alphabeta = 4) : 1000 Win rate : 100.0%
+Mode parall�le
+R�sultats (nb game = 1000) :
+Nombre de victoires du joueur 1 (minimax = 1) : 715 Win rate : 71.5%
+Nombre de victoires du joueur 2 (alphabeta = 0) : 276 Win rate : 27.6%
+Mode parall�le
+R�sultats (nb game = 1000) :
+Nombre de victoires du joueur 1 (minimax = 1) : 376 Win rate : 37.6%
+Nombre de victoires du joueur 2 (alphabeta = 1) : 434 Win rate : 43.4%
+Mode parall�le
+R�sultats (nb game = 1000) :
+Nombre de victoires du joueur 1 (minimax = 1) : 649 Win rate : 64.9%
+Nombre de victoires du joueur 2 (alphabeta = 2) : 350 Win rate : 35.0%
+Mode parall�le
+R�sultats (nb game = 500) :
+Nombre de victoires du joueur 1 (minimax = 1) : 108 Win rate : 21.6%
+Nombre de victoires du joueur 2 (alphabeta = 3) : 339 Win rate : 67.80000000000001%
+Mode parall�le
+R�sultats (nb game = 500) :
+Nombre de victoires du joueur 1 (minimax = 1) : 0 Win rate : 0.0%
+Nombre de victoires du joueur 2 (alphabeta = 4) : 500 Win rate : 100.0%
+Mode parall�le
+R�sultats (nb game = 1000) :
+Nombre de victoires du joueur 1 (minimax = 2) : 882 Win rate : 88.2%
+Nombre de victoires du joueur 2 (alphabeta = 0) : 116 Win rate : 11.600000000000001%
+Mode parall�le
+R�sultats (nb game = 1000) :
+Nombre de victoires du joueur 1 (minimax = 2) : 450 Win rate : 45.0%
+Nombre de victoires du joueur 2 (alphabeta = 1) : 534 Win rate : 53.400000000000006%
+Mode parall�le
+R�sultats (nb game = 1000) :
+Nombre de victoires du joueur 1 (minimax = 2) : 128 Win rate : 12.8%
+Nombre de victoires du joueur 2 (alphabeta = 2) : 872 Win rate : 87.2%
+Mode parall�le
+R�sultats (nb game = 500) :
+Nombre de victoires du joueur 1 (minimax = 2) : 16 Win rate : 3.2%
+Nombre de victoires du joueur 2 (alphabeta = 3) : 473 Win rate : 94.6%
+Mode parall�le
+R�sultats (nb game = 400) :
+Nombre de victoires du joueur 1 (minimax = 2) : 0 Win rate : 0.0%
+Nombre de victoires du joueur 2 (alphabeta = 4) : 400 Win rate : 100.0%
+Mode parall�le
+R�sultats (nb game = 500) :
+Nombre de victoires du joueur 1 (minimax = 3) : 415 Win rate : 83.0%
+Nombre de victoires du joueur 2 (alphabeta = 0) : 80 Win rate : 16.0%
+Mode parall�le
+R�sultats (nb game = 500) :
+Nombre de victoires du joueur 1 (minimax = 3) : 117 Win rate : 23.400000000000002%
+Nombre de victoires du joueur 2 (alphabeta = 1) : 342 Win rate : 68.4%
+Mode parall�le
+R�sultats (nb game = 500) :
+Nombre de victoires du joueur 1 (minimax = 3) : 396 Win rate : 79.2%
+Nombre de victoires du joueur 2 (alphabeta = 2) : 63 Win rate : 12.6%
+Mode parall�le
+R�sultats (nb game = 400) :
+Nombre de victoires du joueur 1 (minimax = 3) : 63 Win rate : 15.75%
+Nombre de victoires du joueur 2 (alphabeta = 3) : 297 Win rate : 74.25%
 Mode parall�le
 R�sultats (nb game = 300) :
-Nombre de victoires du joueur 1 (minimax = 3) : 0 Win rate : 0.0%
-Nombre de victoires du joueur 2 (minimax = 4) : 0 Win rate : 0.0%
-Mode parall�le
-R�sultats (nb game = 500) :
-Nombre de victoires du joueur 1 (minimax = 4) : 500 Win rate : 100.0%
-Nombre de victoires du joueur 2 (minimax = 0) : 0 Win rate : 0.0%
-Mode parall�le
-R�sultats (nb game = 500) :
-Nombre de victoires du joueur 1 (minimax = 4) : 0 Win rate : 0.0%
-Nombre de victoires du joueur 2 (minimax = 1) : 0 Win rate : 0.0%
-Mode parall�le
-R�sultats (nb game = 500) :
-Nombre de victoires du joueur 1 (minimax = 4) : 0 Win rate : 0.0%
-Nombre de victoires du joueur 2 (minimax = 2) : 0 Win rate : 0.0%
-Mode parall�le
-R�sultats (nb game = 300) :
-Nombre de victoires du joueur 1 (minimax = 4) : 0 Win rate : 0.0%
-Nombre de victoires du joueur 2 (minimax = 3) : 0 Win rate : 0.0%
+Nombre de victoires du joueur 1 (minimax = 3) : 44 Win rate : 14.666666666666666%
+Nombre de victoires du joueur 2 (alphabeta = 4) : 256 Win rate : 85.33333333333334%
