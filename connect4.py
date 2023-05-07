@@ -46,6 +46,8 @@ class Connect4Game:
         self.last_move = col
 
     def is_valid_location(self, col):
+        if (col == None or col < 0 or col >= COLUMN_COUNT):
+            return False
         return self.board[ROW_COUNT-1][col] == EMPTY
 
     def get_next_open_row(self, col):

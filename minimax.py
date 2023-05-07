@@ -18,7 +18,9 @@ class Minimax:
             #print(score, end="|")       #debug pour voir les scores de chaque coup 
             if score > best_score:
                 best_score = score
-                best_move = move    
+                best_move = move   
+        if best_move == None:
+            best_move = valid_moves[0]
         #print("")                      #debug pour voir les scores de chaque coup (retour à la ligne)
         return best_move         
 
