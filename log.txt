@@ -209,83 +209,83 @@ Mode parallï¿½le
 Rï¿½sultats (nb game = 1000) :
 Nombre de victoires du joueur 1 (minimax = 0) : 0 Win rate : 0.0%
 Nombre de victoires du joueur 2 (minimax = 3) : 1000 Win rate : 100.0%
-Mode parallèle
-Résultats (nb game = 1000) :
+Mode parallï¿½le
+Rï¿½sultats (nb game = 1000) :
 Nombre de victoires du joueur 1 (minimax = 0) : 0 Win rate : 0.0%
 Nombre de victoires du joueur 2 (minimax = 4) : 1000 Win rate : 100.0%
-Mode parallèle
-Résultats (nb game = 1000) :
+Mode parallï¿½le
+Rï¿½sultats (nb game = 1000) :
 Nombre de victoires du joueur 1 (minimax = 1) : 1000 Win rate : 100.0%
 Nombre de victoires du joueur 2 (minimax = 0) : 0 Win rate : 0.0%
-Mode parallèle
-Résultats (nb game = 1000) :
+Mode parallï¿½le
+Rï¿½sultats (nb game = 1000) :
 Nombre de victoires du joueur 1 (minimax = 1) : 0 Win rate : 0.0%
 Nombre de victoires du joueur 2 (minimax = 1) : 0 Win rate : 0.0%
-Mode parallèle
-Résultats (nb game = 1000) :
+Mode parallï¿½le
+Rï¿½sultats (nb game = 1000) :
 Nombre de victoires du joueur 1 (minimax = 1) : 0 Win rate : 0.0%
 Nombre de victoires du joueur 2 (minimax = 2) : 0 Win rate : 0.0%
-Mode parallèle
-Résultats (nb game = 500) :
+Mode parallï¿½le
+Rï¿½sultats (nb game = 500) :
 Nombre de victoires du joueur 1 (minimax = 1) : 0 Win rate : 0.0%
 Nombre de victoires du joueur 2 (minimax = 3) : 0 Win rate : 0.0%
-Mode parallèle
-Résultats (nb game = 500) :
+Mode parallï¿½le
+Rï¿½sultats (nb game = 500) :
 Nombre de victoires du joueur 1 (minimax = 1) : 0 Win rate : 0.0%
 Nombre de victoires du joueur 2 (minimax = 4) : 0 Win rate : 0.0%
-Mode parallèle
-Résultats (nb game = 1000) :
+Mode parallï¿½le
+Rï¿½sultats (nb game = 1000) :
 Nombre de victoires du joueur 1 (minimax = 2) : 0 Win rate : 0.0%
 Nombre de victoires du joueur 2 (minimax = 0) : 0 Win rate : 0.0%
-Mode parallèle
-Résultats (nb game = 1000) :
+Mode parallï¿½le
+Rï¿½sultats (nb game = 1000) :
 Nombre de victoires du joueur 1 (minimax = 2) : 0 Win rate : 0.0%
 Nombre de victoires du joueur 2 (minimax = 1) : 0 Win rate : 0.0%
-Mode parallèle
-Résultats (nb game = 1000) :
+Mode parallï¿½le
+Rï¿½sultats (nb game = 1000) :
 Nombre de victoires du joueur 1 (minimax = 2) : 0 Win rate : 0.0%
 Nombre de victoires du joueur 2 (minimax = 2) : 0 Win rate : 0.0%
-Mode parallèle
-Résultats (nb game = 500) :
+Mode parallï¿½le
+Rï¿½sultats (nb game = 500) :
 Nombre de victoires du joueur 1 (minimax = 2) : 0 Win rate : 0.0%
 Nombre de victoires du joueur 2 (minimax = 3) : 0 Win rate : 0.0%
-Mode parallèle
-Résultats (nb game = 400) :
+Mode parallï¿½le
+Rï¿½sultats (nb game = 400) :
 Nombre de victoires du joueur 1 (minimax = 2) : 0 Win rate : 0.0%
 Nombre de victoires du joueur 2 (minimax = 4) : 0 Win rate : 0.0%
-Mode parallèle
-Résultats (nb game = 500) :
+Mode parallï¿½le
+Rï¿½sultats (nb game = 500) :
 Nombre de victoires du joueur 1 (minimax = 3) : 500 Win rate : 100.0%
 Nombre de victoires du joueur 2 (minimax = 0) : 0 Win rate : 0.0%
-Mode parallèle
-Résultats (nb game = 500) :
+Mode parallï¿½le
+Rï¿½sultats (nb game = 500) :
 Nombre de victoires du joueur 1 (minimax = 3) : 0 Win rate : 0.0%
 Nombre de victoires du joueur 2 (minimax = 1) : 0 Win rate : 0.0%
-Mode parallèle
-Résultats (nb game = 500) :
+Mode parallï¿½le
+Rï¿½sultats (nb game = 500) :
 Nombre de victoires du joueur 1 (minimax = 3) : 0 Win rate : 0.0%
 Nombre de victoires du joueur 2 (minimax = 2) : 0 Win rate : 0.0%
-Mode parallèle
-Résultats (nb game = 400) :
+Mode parallï¿½le
+Rï¿½sultats (nb game = 400) :
 Nombre de victoires du joueur 1 (minimax = 3) : 0 Win rate : 0.0%
 Nombre de victoires du joueur 2 (minimax = 3) : 0 Win rate : 0.0%
-Mode parallèle
-Résultats (nb game = 300) :
+Mode parallï¿½le
+Rï¿½sultats (nb game = 300) :
 Nombre de victoires du joueur 1 (minimax = 3) : 0 Win rate : 0.0%
 Nombre de victoires du joueur 2 (minimax = 4) : 0 Win rate : 0.0%
-Mode parallèle
-Résultats (nb game = 500) :
+Mode parallï¿½le
+Rï¿½sultats (nb game = 500) :
 Nombre de victoires du joueur 1 (minimax = 4) : 500 Win rate : 100.0%
 Nombre de victoires du joueur 2 (minimax = 0) : 0 Win rate : 0.0%
-Mode parallèle
-Résultats (nb game = 500) :
+Mode parallï¿½le
+Rï¿½sultats (nb game = 500) :
 Nombre de victoires du joueur 1 (minimax = 4) : 0 Win rate : 0.0%
 Nombre de victoires du joueur 2 (minimax = 1) : 0 Win rate : 0.0%
-Mode parallèle
-Résultats (nb game = 500) :
+Mode parallï¿½le
+Rï¿½sultats (nb game = 500) :
 Nombre de victoires du joueur 1 (minimax = 4) : 0 Win rate : 0.0%
 Nombre de victoires du joueur 2 (minimax = 2) : 0 Win rate : 0.0%
-Mode parallèle
-Résultats (nb game = 300) :
+Mode parallï¿½le
+Rï¿½sultats (nb game = 300) :
 Nombre de victoires du joueur 1 (minimax = 4) : 0 Win rate : 0.0%
 Nombre de victoires du joueur 2 (minimax = 3) : 0 Win rate : 0.0%
