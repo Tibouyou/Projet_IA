@@ -207,7 +207,6 @@ class Connect4Console:
                         num_rollouts, run_time = self.game._player1.statistics()
                         print("p1 Statistics: ", num_rollouts, "rollouts in", run_time, "seconds")
                         col = self.game._player1.best_move()
-                    print("p1 move: ", col)
                 else:
                     if(self.game._player2_type != "mcts"):
                         col = self.game._player2.get_move(self.game, self.game.current_player)
@@ -216,7 +215,6 @@ class Connect4Console:
                         num_rollouts, run_time = self.game._player2.statistics()
                         print("p2 Statistics: ", num_rollouts, "rollouts in", run_time, "seconds")
                         col = self.game._player2.best_move()
-                    print("p2 move: ", col)
 
                 if col != -1:
 
@@ -289,10 +287,15 @@ class Connect4Viewer:
         self.root.geometry("{}x{}".format(WIDTH, HEIGHT))
         self.canvas = tk.Canvas(self.root, width=WIDTH, height=HEIGHT)
         self.canvas.pack()
-        
+        if(self.game._player1_type == "mcts" or self.game._player2_type == "mcts"):
+            self.mcts_is_here = True
+        else:
+            self.mcts_is_here = False
+
         self.draw_board()
         
         self.root.mainloop()
+        
         
     def draw_board(self):
         for c in range(COLUMN_COUNT):
@@ -308,19 +311,29 @@ class Connect4Viewer:
         self.update()
         
     def update(self):
-        #print (self.game.current_player,end=" ")             ### QUOIIIIIIIIIIIIIIIIIIIIIIIIIIIIII?
-        liste_IA = ["minimax", "alphabeta", "mcts"]
+        
         if self.game.current_player == 1:
             type_player = self.game._player1_type
+            player = self.game._player1
         else:
             type_player = self.game._player2_type
+            player = self.game._player2
         
         if not self.game.game_over:
-            if type_player in liste_IA:
+            if type_player != "human":
                 #print("C",end=" ")
                 # Current player is a bot, use AI to determine next move
+                if(type_player == "mcts"):
+                    player.search()
+                    col = player.best_move()
+                else:
+                    col = self.get_ai_move(self.game.current_player)
                 
-                col = self.get_ai_move(self.game.current_player)
+                if(self.game._player1_type == "mcts"):
+                    self.game._player1.move(col)
+                if(self.game._player2_type == "mcts"):
+                    self.game._player2.move(col)
+                
                 self.root.after(500, lambda: self.play_ai_move(col))
         
         
@@ -328,17 +341,22 @@ class Connect4Viewer:
 
 
     def on_click(self, event):
-        liste_IA = ["minimax", "alphabeta", "mcts"]
+        
         if self.game.current_player == 1:
             type_player = self.game._player1_type
         else:
             type_player = self.game._player2_type
 
         if not self.game.game_over:
-            if type_player not in liste_IA:
+            if type_player == "human":
                 # Current player is human, get column from mouse click event
                 col = event.x // SQUARE_SIZE
                 
+                if(self.game._player1_type == "mcts"):
+                    self.game._player1.move(col)
+                if(self.game._player2_type == "mcts"):
+                    self.game._player2.move(col)
+
                 if self.game.is_valid_location(col):
                     row = self.game.get_next_open_row(col)
                     self.game.drop_piece(row, col, self.game.current_player)
