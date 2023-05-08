@@ -139,57 +139,18 @@ python .\main_console.py -p1 minimax -p2 minimax -d1 0 -d2 0 -c --num_games 1000
 python .\main_console.py -p1 minimax -p2 minimax -d1 0 -d2 1 -c --num_games 1000 >>log.txt &
 python .\main_console.py -p1 minimax -p2 minimax -d1 0 -d2 2 -c --num_games 1000 >>log.txt &
 python .\main_console.py -p1 minimax -p2 minimax -d1 0 -d2 3 -c --num_games 1000 >>log.txt &
-python .\main_console.py -p1 minimax -p2 minimax -d1 0 -d2 4 -c --num_games 1000 >>log.txt &
 python .\main_console.py -p1 minimax -p2 minimax -d1 1 -d2 0 -c --num_games 1000 >>log.txt &
 python .\main_console.py -p1 minimax -p2 minimax -d1 1 -d2 1 -c --num_games 1000 >>log.txt &
 python .\main_console.py -p1 minimax -p2 minimax -d1 1 -d2 2 -c --num_games 1000 >>log.txt &
 python .\main_console.py -p1 minimax -p2 minimax -d1 1 -d2 3 -c --num_games 500 >>log.txt &
-python .\main_console.py -p1 minimax -p2 minimax -d1 1 -d2 4 -c --num_games 500 >>log.txt &
 python .\main_console.py -p1 minimax -p2 minimax -d1 2 -d2 0 -c --num_games 1000 >>log.txt &
 python .\main_console.py -p1 minimax -p2 minimax -d1 2 -d2 1 -c --num_games 1000 >>log.txt &
 python .\main_console.py -p1 minimax -p2 minimax -d1 2 -d2 2 -c --num_games 1000 >>log.txt &
 python .\main_console.py -p1 minimax -p2 minimax -d1 2 -d2 3 -c --num_games 500 >>log.txt &
-python .\main_console.py -p1 minimax -p2 minimax -d1 2 -d2 4 -c --num_games 400 >>log.txt &
 python .\main_console.py -p1 minimax -p2 minimax -d1 3 -d2 0 -c --num_games 500 >>log.txt &
 python .\main_console.py -p1 minimax -p2 minimax -d1 3 -d2 1 -c --num_games 500 >>log.txt &
 python .\main_console.py -p1 minimax -p2 minimax -d1 3 -d2 2 -c --num_games 500 >>log.txt &
-python .\main_console.py -p1 minimax -p2 minimax -d1 3 -d2 3 -c --num_games 400 >>log.txt &
-python .\main_console.py -p1 minimax -p2 minimax -d1 3 -d2 4 -c --num_games 300 >>log.txt &
-python .\main_console.py -p1 minimax -p2 minimax -d1 4 -d2 0 -c --num_games 500 >>log.txt &
-python .\main_console.py -p1 minimax -p2 minimax -d1 4 -d2 1 -c --num_games 500 >>log.txt &
-python .\main_console.py -p1 minimax -p2 minimax -d1 4 -d2 2 -c --num_games 500 >>log.txt &
-python .\main_console.py -p1 minimax -p2 minimax -d1 4 -d2 3 -c --num_games 300 >>log.txt &
-python .\main_console.py -p1 minimax -p2 minimax -d1 4 -d2 4 -c --num_games 250 >>log.txt
-
-
-COMMANDES SUR WINDOWS POUR STAT MINIMAX VS ALPHABETA :
-
-
-python .\main_console.py -p1 minimax -p2 alphabeta -d1 0 -d2 0 -c --num_games 1000 >>log.txt &
-python .\main_console.py -p1 minimax -p2 alphabeta -d1 0 -d2 1 -c --num_games 1000 >>log.txt &
-python .\main_console.py -p1 minimax -p2 alphabeta -d1 0 -d2 2 -c --num_games 1000 >>log.txt &
-python .\main_console.py -p1 minimax -p2 alphabeta -d1 0 -d2 3 -c --num_games 1000 >>log.txt &
-python .\main_console.py -p1 minimax -p2 alphabeta -d1 0 -d2 4 -c --num_games 1000 >>log.txt &
-python .\main_console.py -p1 minimax -p2 alphabeta -d1 1 -d2 0 -c --num_games 1000 >>log.txt &
-python .\main_console.py -p1 minimax -p2 alphabeta -d1 1 -d2 1 -c --num_games 1000 >>log.txt &
-python .\main_console.py -p1 minimax -p2 alphabeta -d1 1 -d2 2 -c --num_games 1000 >>log.txt &
-python .\main_console.py -p1 minimax -p2 alphabeta -d1 1 -d2 3 -c --num_games 500 >>log.txt &
-python .\main_console.py -p1 minimax -p2 alphabeta -d1 1 -d2 4 -c --num_games 500 >>log.txt &
-python .\main_console.py -p1 minimax -p2 alphabeta -d1 2 -d2 0 -c --num_games 1000 >>log.txt &
-python .\main_console.py -p1 minimax -p2 alphabeta -d1 2 -d2 1 -c --num_games 1000 >>log.txt &
-python .\main_console.py -p1 minimax -p2 alphabeta -d1 2 -d2 2 -c --num_games 1000 >>log.txt &
-python .\main_console.py -p1 minimax -p2 alphabeta -d1 2 -d2 3 -c --num_games 500 >>log.txt &
-python .\main_console.py -p1 minimax -p2 alphabeta -d1 2 -d2 4 -c --num_games 400 >>log.txt &
-python .\main_console.py -p1 minimax -p2 alphabeta -d1 3 -d2 0 -c --num_games 500 >>log.txt &
-python .\main_console.py -p1 minimax -p2 alphabeta -d1 3 -d2 1 -c --num_games 500 >>log.txt &
-python .\main_console.py -p1 minimax -p2 alphabeta -d1 3 -d2 2 -c --num_games 500 >>log.txt &
-python .\main_console.py -p1 minimax -p2 alphabeta -d1 3 -d2 3 -c --num_games 400 >>log.txt &
-python .\main_console.py -p1 minimax -p2 alphabeta -d1 3 -d2 4 -c --num_games 300 >>log.txt &
-python .\main_console.py -p1 minimax -p2 alphabeta -d1 4 -d2 0 -c --num_games 500 >>log.txt &
-python .\main_console.py -p1 minimax -p2 alphabeta -d1 4 -d2 1 -c --num_games 500 >>log.txt &
-python .\main_console.py -p1 minimax -p2 alphabeta -d1 4 -d2 2 -c --num_games 500 >>log.txt &
-python .\main_console.py -p1 minimax -p2 alphabeta -d1 4 -d2 3 -c --num_games 300 >>log.txt &
-python .\main_console.py -p1 minimax -p2 alphabeta -d1 4 -d2 4 -c --num_games 250 >>log.txt
+python .\main_console.py -p1 minimax -p2 minimax -d1 3 -d2 3 -c --num_games 400 >>log.txt
 
 
 RESULTATS POUR STAT MINIMAX VS MINIMAX :
@@ -211,48 +172,36 @@ Nombre de victoires du joueur 1 (minimax = 0) : 0 Win rate : 0.0%
 Nombre de victoires du joueur 2 (minimax = 3) : 1000 Win rate : 100.0%
 Mode parallï¿½le
 Rï¿½sultats (nb game = 1000) :
-Nombre de victoires du joueur 1 (minimax = 0) : 0 Win rate : 0.0%
-Nombre de victoires du joueur 2 (minimax = 4) : 1000 Win rate : 100.0%
-Mode parallï¿½le
-Rï¿½sultats (nb game = 1000) :
 Nombre de victoires du joueur 1 (minimax = 1) : 1000 Win rate : 100.0%
 Nombre de victoires du joueur 2 (minimax = 0) : 0 Win rate : 0.0%
 Mode parallï¿½le
 Rï¿½sultats (nb game = 1000) :
 Nombre de victoires du joueur 1 (minimax = 1) : 0 Win rate : 0.0%
-Nombre de victoires du joueur 2 (minimax = 1) : 0 Win rate : 0.0%
+Nombre de victoires du joueur 2 (minimax = 1) : 1000 Win rate : 100.0%
 Mode parallï¿½le
 Rï¿½sultats (nb game = 1000) :
 Nombre de victoires du joueur 1 (minimax = 1) : 0 Win rate : 0.0%
-Nombre de victoires du joueur 2 (minimax = 2) : 0 Win rate : 0.0%
+Nombre de victoires du joueur 2 (minimax = 2) : 1000 Win rate : 100.0%
 Mode parallï¿½le
 Rï¿½sultats (nb game = 500) :
-Nombre de victoires du joueur 1 (minimax = 1) : 0 Win rate : 0.0%
+Nombre de victoires du joueur 1 (minimax = 1) : 500 Win rate : 100.0%
 Nombre de victoires du joueur 2 (minimax = 3) : 0 Win rate : 0.0%
 Mode parallï¿½le
-Rï¿½sultats (nb game = 500) :
-Nombre de victoires du joueur 1 (minimax = 1) : 0 Win rate : 0.0%
-Nombre de victoires du joueur 2 (minimax = 4) : 0 Win rate : 0.0%
-Mode parallï¿½le
 Rï¿½sultats (nb game = 1000) :
 Nombre de victoires du joueur 1 (minimax = 2) : 0 Win rate : 0.0%
-Nombre de victoires du joueur 2 (minimax = 0) : 0 Win rate : 0.0%
+Nombre de victoires du joueur 2 (minimax = 0) : 1000 Win rate : 100.0%
 Mode parallï¿½le
 Rï¿½sultats (nb game = 1000) :
-Nombre de victoires du joueur 1 (minimax = 2) : 0 Win rate : 0.0%
+Nombre de victoires du joueur 1 (minimax = 2) : 1000 Win rate : 100.0%
 Nombre de victoires du joueur 2 (minimax = 1) : 0 Win rate : 0.0%
 Mode parallï¿½le
 Rï¿½sultats (nb game = 1000) :
 Nombre de victoires du joueur 1 (minimax = 2) : 0 Win rate : 0.0%
-Nombre de victoires du joueur 2 (minimax = 2) : 0 Win rate : 0.0%
+Nombre de victoires du joueur 2 (minimax = 2) : 1000 Win rate : 100.0%
 Mode parallï¿½le
 Rï¿½sultats (nb game = 500) :
 Nombre de victoires du joueur 1 (minimax = 2) : 0 Win rate : 0.0%
-Nombre de victoires du joueur 2 (minimax = 3) : 0 Win rate : 0.0%
-Mode parallï¿½le
-Rï¿½sultats (nb game = 400) :
-Nombre de victoires du joueur 1 (minimax = 2) : 0 Win rate : 0.0%
-Nombre de victoires du joueur 2 (minimax = 4) : 0 Win rate : 0.0%
+Nombre de victoires du joueur 2 (minimax = 3) : 500 Win rate : 100.0%
 Mode parallï¿½le
 Rï¿½sultats (nb game = 500) :
 Nombre de victoires du joueur 1 (minimax = 3) : 500 Win rate : 100.0%
@@ -260,35 +209,127 @@ Nombre de victoires du joueur 2 (minimax = 0) : 0 Win rate : 0.0%
 Mode parallï¿½le
 Rï¿½sultats (nb game = 500) :
 Nombre de victoires du joueur 1 (minimax = 3) : 0 Win rate : 0.0%
-Nombre de victoires du joueur 2 (minimax = 1) : 0 Win rate : 0.0%
+Nombre de victoires du joueur 2 (minimax = 1) : 500 Win rate : 100.0%
 Mode parallï¿½le
 Rï¿½sultats (nb game = 500) :
-Nombre de victoires du joueur 1 (minimax = 3) : 0 Win rate : 0.0%
+Nombre de victoires du joueur 1 (minimax = 3) : 500 Win rate : 100.0%
 Nombre de victoires du joueur 2 (minimax = 2) : 0 Win rate : 0.0%
 Mode parallï¿½le
 Rï¿½sultats (nb game = 400) :
-Nombre de victoires du joueur 1 (minimax = 3) : 0 Win rate : 0.0%
+Nombre de victoires du joueur 1 (minimax = 3) : 400 Win rate : 100.0%
 Nombre de victoires du joueur 2 (minimax = 3) : 0 Win rate : 0.0%
+
+
+
+COMMANDES SUR WINDOWS POUR STAT MINIMAX VS ALPHABETA :
+
+
+python .\main_console.py -p1 minimax -p2 alphabeta -d1 0 -d2 0 -c --num_games 1000 >>log2.txt &
+python .\main_console.py -p1 minimax -p2 alphabeta -d1 0 -d2 1 -c --num_games 1000 >>log2.txt &
+python .\main_console.py -p1 minimax -p2 alphabeta -d1 0 -d2 2 -c --num_games 1000 >>log2.txt &
+python .\main_console.py -p1 minimax -p2 alphabeta -d1 0 -d2 3 -c --num_games 1000 >>log2.txt &
+python .\main_console.py -p1 minimax -p2 alphabeta -d1 0 -d2 4 -c --num_games 1000 >>log2.txt &
+python .\main_console.py -p1 minimax -p2 alphabeta -d1 1 -d2 0 -c --num_games 1000 >>log2.txt &
+python .\main_console.py -p1 minimax -p2 alphabeta -d1 1 -d2 1 -c --num_games 1000 >>log2.txt &
+python .\main_console.py -p1 minimax -p2 alphabeta -d1 1 -d2 2 -c --num_games 1000 >>log2.txt &
+python .\main_console.py -p1 minimax -p2 alphabeta -d1 1 -d2 3 -c --num_games 500 >>log2.txt &
+python .\main_console.py -p1 minimax -p2 alphabeta -d1 1 -d2 4 -c --num_games 500 >>log2.txt &
+python .\main_console.py -p1 minimax -p2 alphabeta -d1 2 -d2 0 -c --num_games 1000 >>log2.txt &
+python .\main_console.py -p1 minimax -p2 alphabeta -d1 2 -d2 1 -c --num_games 1000 >>log2.txt &
+python .\main_console.py -p1 minimax -p2 alphabeta -d1 2 -d2 2 -c --num_games 1000 >>log2.txt &
+python .\main_console.py -p1 minimax -p2 alphabeta -d1 2 -d2 3 -c --num_games 500 >>log2.txt &
+python .\main_console.py -p1 minimax -p2 alphabeta -d1 2 -d2 4 -c --num_games 400 >>log2.txt &
+python .\main_console.py -p1 minimax -p2 alphabeta -d1 3 -d2 0 -c --num_games 500 >>log2.txt &
+python .\main_console.py -p1 minimax -p2 alphabeta -d1 3 -d2 1 -c --num_games 500 >>log2.txt &
+python .\main_console.py -p1 minimax -p2 alphabeta -d1 3 -d2 2 -c --num_games 500 >>log2.txt &
+python .\main_console.py -p1 minimax -p2 alphabeta -d1 3 -d2 3 -c --num_games 400 >>log2.txt &
+python .\main_console.py -p1 minimax -p2 alphabeta -d1 3 -d2 4 -c --num_games 300 >>log2.txt
+
+
+
+RESULTATS POUR STAT MINIMAX VS ALPHABETA :
+
+
+Mode parallï¿½le
+Rï¿½sultats (nb game = 1000) :
+Nombre de victoires du joueur 1 (minimax = 0) : 428 Win rate : 42.8%
+Nombre de victoires du joueur 2 (alphabeta = 0) : 572 Win rate : 57.199999999999996%
+Mode parallï¿½le
+Rï¿½sultats (nb game = 1000) :
+Nombre de victoires du joueur 1 (minimax = 0) : 52 Win rate : 5.2%
+Nombre de victoires du joueur 2 (alphabeta = 1) : 944 Win rate : 94.39999999999999%
+Mode parallï¿½le
+Rï¿½sultats (nb game = 1000) :
+Nombre de victoires du joueur 1 (minimax = 0) : 0 Win rate : 0.0%
+Nombre de victoires du joueur 2 (alphabeta = 2) : 979 Win rate : 97.89999999999999%
+Mode parallï¿½le
+Rï¿½sultats (nb game = 1000) :
+Nombre de victoires du joueur 1 (minimax = 0) : 0 Win rate : 0.0%
+Nombre de victoires du joueur 2 (alphabeta = 3) : 1000 Win rate : 100.0%
+Mode parallï¿½le
+Rï¿½sultats (nb game = 1000) :
+Nombre de victoires du joueur 1 (minimax = 0) : 0 Win rate : 0.0%
+Nombre de victoires du joueur 2 (alphabeta = 4) : 1000 Win rate : 100.0%
+Mode parallï¿½le
+Rï¿½sultats (nb game = 1000) :
+Nombre de victoires du joueur 1 (minimax = 1) : 715 Win rate : 71.5%
+Nombre de victoires du joueur 2 (alphabeta = 0) : 276 Win rate : 27.6%
+Mode parallï¿½le
+Rï¿½sultats (nb game = 1000) :
+Nombre de victoires du joueur 1 (minimax = 1) : 376 Win rate : 37.6%
+Nombre de victoires du joueur 2 (alphabeta = 1) : 434 Win rate : 43.4%
+Mode parallï¿½le
+Rï¿½sultats (nb game = 1000) :
+Nombre de victoires du joueur 1 (minimax = 1) : 649 Win rate : 64.9%
+Nombre de victoires du joueur 2 (alphabeta = 2) : 350 Win rate : 35.0%
+Mode parallï¿½le
+Rï¿½sultats (nb game = 500) :
+Nombre de victoires du joueur 1 (minimax = 1) : 108 Win rate : 21.6%
+Nombre de victoires du joueur 2 (alphabeta = 3) : 339 Win rate : 67.80000000000001%
+Mode parallï¿½le
+Rï¿½sultats (nb game = 500) :
+Nombre de victoires du joueur 1 (minimax = 1) : 0 Win rate : 0.0%
+Nombre de victoires du joueur 2 (alphabeta = 4) : 500 Win rate : 100.0%
+Mode parallï¿½le
+Rï¿½sultats (nb game = 1000) :
+Nombre de victoires du joueur 1 (minimax = 2) : 882 Win rate : 88.2%
+Nombre de victoires du joueur 2 (alphabeta = 0) : 116 Win rate : 11.600000000000001%
+Mode parallï¿½le
+Rï¿½sultats (nb game = 1000) :
+Nombre de victoires du joueur 1 (minimax = 2) : 450 Win rate : 45.0%
+Nombre de victoires du joueur 2 (alphabeta = 1) : 534 Win rate : 53.400000000000006%
+Mode parallï¿½le
+Rï¿½sultats (nb game = 1000) :
+Nombre de victoires du joueur 1 (minimax = 2) : 128 Win rate : 12.8%
+Nombre de victoires du joueur 2 (alphabeta = 2) : 872 Win rate : 87.2%
+Mode parallï¿½le
+Rï¿½sultats (nb game = 500) :
+Nombre de victoires du joueur 1 (minimax = 2) : 16 Win rate : 3.2%
+Nombre de victoires du joueur 2 (alphabeta = 3) : 473 Win rate : 94.6%
+Mode parallï¿½le
+Rï¿½sultats (nb game = 400) :
+Nombre de victoires du joueur 1 (minimax = 2) : 0 Win rate : 0.0%
+Nombre de victoires du joueur 2 (alphabeta = 4) : 400 Win rate : 100.0%
+Mode parallï¿½le
+Rï¿½sultats (nb game = 500) :
+Nombre de victoires du joueur 1 (minimax = 3) : 415 Win rate : 83.0%
+Nombre de victoires du joueur 2 (alphabeta = 0) : 80 Win rate : 16.0%
+Mode parallï¿½le
+Rï¿½sultats (nb game = 500) :
+Nombre de victoires du joueur 1 (minimax = 3) : 117 Win rate : 23.400000000000002%
+Nombre de victoires du joueur 2 (alphabeta = 1) : 342 Win rate : 68.4%
+Mode parallï¿½le
+Rï¿½sultats (nb game = 500) :
+Nombre de victoires du joueur 1 (minimax = 3) : 396 Win rate : 79.2%
+Nombre de victoires du joueur 2 (alphabeta = 2) : 63 Win rate : 12.6%
+Mode parallï¿½le
+Rï¿½sultats (nb game = 400) :
+Nombre de victoires du joueur 1 (minimax = 3) : 63 Win rate : 15.75%
+Nombre de victoires du joueur 2 (alphabeta = 3) : 297 Win rate : 74.25%
 Mode parallï¿½le
 Rï¿½sultats (nb game = 300) :
-Nombre de victoires du joueur 1 (minimax = 3) : 0 Win rate : 0.0%
-Nombre de victoires du joueur 2 (minimax = 4) : 0 Win rate : 0.0%
-Mode parallï¿½le
-Rï¿½sultats (nb game = 500) :
-Nombre de victoires du joueur 1 (minimax = 4) : 500 Win rate : 100.0%
-Nombre de victoires du joueur 2 (minimax = 0) : 0 Win rate : 0.0%
-Mode parallï¿½le
-Rï¿½sultats (nb game = 500) :
-Nombre de victoires du joueur 1 (minimax = 4) : 0 Win rate : 0.0%
-Nombre de victoires du joueur 2 (minimax = 1) : 0 Win rate : 0.0%
-Mode parallï¿½le
-Rï¿½sultats (nb game = 500) :
-Nombre de victoires du joueur 1 (minimax = 4) : 0 Win rate : 0.0%
-Nombre de victoires du joueur 2 (minimax = 2) : 0 Win rate : 0.0%
-Mode parallï¿½le
-Rï¿½sultats (nb game = 300) :
-Nombre de victoires du joueur 1 (minimax = 4) : 0 Win rate : 0.0%
-Nombre de victoires du joueur 2 (minimax = 3) : 0 Win rate : 0.0%
+Nombre de victoires du joueur 1 (minimax = 3) : 44 Win rate : 14.666666666666666%
+Nombre de victoires du joueur 2 (alphabeta = 4) : 256 Win rate : 85.33333333333334%
 
 
 COMMANDES SUR WINDOWS POUR STAT MCTS VS ALPHABETA :
@@ -316,2083 +357,83 @@ python .\main_console.py -p1 mcts -p2 alphabeta -d1 400 -d2 4 -c --num_games 100
 
 RESULTATS POR STAT MCTS VS ALPHABETA :
 
-Mode parallèle
-Player  1  wins!
-Player  1  wins!
-Player  1  wins!
-Player  2  wins!
-Player  1  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  1  wins!
-Player  1  wins!
-Player  1  wins!
-Player  1  wins!
-Player  1  wins!
-Player  1  wins!
-Player  1  wins!
-Player  1  wins!
-Player  2  wins!
-Player  1  wins!
-Player  1  wins!
-Player  1  wins!
-Player  1  wins!
-Player  1  wins!
-Player  1  wins!
-Player  2  wins!
-Player  1  wins!
-Player  1  wins!
-Player  1  wins!
-Player  2  wins!
-Player  1  wins!
-Player  1  wins!
-Player  1  wins!
-Player  2  wins!
-Player  1  wins!
-Player  1  wins!
-Player  1  wins!
-Player  2  wins!
-Player  1  wins!
-Player  1  wins!
-Player  2  wins!
-Player  1  wins!
-Player  1  wins!
-Player  1  wins!
-Player  1  wins!
-Player  2  wins!
-Player  2  wins!
-Player  1  wins!
-Player  1  wins!
-Player  2  wins!
-Player  2  wins!
-Player  1  wins!
-Player  1  wins!
-Player  1  wins!
-Player  1  wins!
-Player  2  wins!
-Player  1  wins!
-Player  1  wins!
-Player  1  wins!
-Player  1  wins!
-Player  1  wins!
-Player  2  wins!
-Player  1  wins!
-Player  1  wins!
-Player  1  wins!
-Player  1  wins!
-Player  1  wins!
-Player  2  wins!
-Player  2  wins!
-Player  1  wins!
-Player  1  wins!
-Player  2  wins!
-Player  2  wins!
-Player  1  wins!
-Player  1  wins!
-Player  2  wins!
-Player  2  wins!
-Player  1  wins!
-Player  1  wins!
-Player  1  wins!
-Player  1  wins!
-Player  1  wins!
-Player  2  wins!
-Player  1  wins!
-Player  2  wins!
-Player  1  wins!
-Player  1  wins!
-Player  1  wins!
-Player  1  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  1  wins!
-Player  1  wins!
-Player  2  wins!
-Player  1  wins!
-Player  2  wins!
-Player  2  wins!
-Player  1  wins!
-Player  1  wins!
-Player  2  wins!
-Résultats (nb game = 100) :
+Mode parallï¿½le
+Rï¿½sultats (nb game = 100) :
 Nombre de victoires du joueur 1 (mcts = 100) : 68 Win rate : 68.0%
 Nombre de victoires du joueur 2 (alphabeta = 0) : 32 Win rate : 32.0%
-Mode parallèle
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  1  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  1  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  1  wins!
-Player  2  wins!
-Tie!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  1  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  1  wins!
-Player  2  wins!
-Player  2  wins!
-Player  1  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  1  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  1  wins!
-Player  1  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  1  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  1  wins!
-Player  1  wins!
-Player  1  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Résultats (nb game = 100) :
+Mode parallï¿½le
+Rï¿½sultats (nb game = 100) :
 Nombre de victoires du joueur 1 (mcts = 100) : 13 Win rate : 13.0%
 Nombre de victoires du joueur 2 (alphabeta = 1) : 87 Win rate : 87.0%
-Mode parallèle
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  1  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Tie!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  1  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  1  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  1  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  1  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  1  wins!
-Player  2  wins!
-Player  2  wins!
-Player  1  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  1  wins!
-Player  1  wins!
-Player  2  wins!
-Player  2  wins!
-Player  1  wins!
-Player  2  wins!
-Résultats (nb game = 100) :
+Mode parallï¿½le
+Rï¿½sultats (nb game = 100) :
 Nombre de victoires du joueur 1 (mcts = 100) : 10 Win rate : 10.0%
 Nombre de victoires du joueur 2 (alphabeta = 2) : 90 Win rate : 90.0%
-Mode parallèle
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Tie!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  1  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Tie!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  1  wins!
-Player  2  wins!
-Player  1  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  1  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  1  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  1  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  1  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Résultats (nb game = 100) :
+Mode parallï¿½le
+Rï¿½sultats (nb game = 100) :
 Nombre de victoires du joueur 1 (mcts = 100) : 7 Win rate : 7.000000000000001%
 Nombre de victoires du joueur 2 (alphabeta = 3) : 93 Win rate : 93.0%
-Mode parallèle
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  1  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  1  wins!
-Tie!
-Player  2  wins!
-Player  2  wins!
-Player  1  wins!
-Player  1  wins!
-Player  2  wins!
-Player  2  wins!
-Player  1  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  1  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  1  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  1  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  1  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  1  wins!
-Player  1  wins!
-Player  2  wins!
-Player  2  wins!
-Player  1  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  1  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Résultats (nb game = 100) :
+Mode parallï¿½le
+Rï¿½sultats (nb game = 100) :
 Nombre de victoires du joueur 1 (mcts = 100) : 13 Win rate : 13.0%
 Nombre de victoires du joueur 2 (alphabeta = 4) : 87 Win rate : 87.0%
-Mode parallèle
-Player  2  wins!
-Player  1  wins!
-Player  1  wins!
-Player  1  wins!
-Player  1  wins!
-Player  2  wins!
-Player  1  wins!
-Player  1  wins!
-Player  2  wins!
-Player  1  wins!
-Player  1  wins!
-Player  2  wins!
-Player  1  wins!
-Player  1  wins!
-Player  2  wins!
-Player  1  wins!
-Player  1  wins!
-Player  2  wins!
-Player  1  wins!
-Player  1  wins!
-Player  1  wins!
-Player  1  wins!
-Player  2  wins!
-Player  1  wins!
-Player  1  wins!
-Player  1  wins!
-Player  1  wins!
-Player  1  wins!
-Player  1  wins!
-Player  2  wins!
-Player  1  wins!
-Player  2  wins!
-Player  1  wins!
-Player  1  wins!
-Player  1  wins!
-Player  1  wins!
-Player  2  wins!
-Player  1  wins!
-Player  2  wins!
-Player  2  wins!
-Player  1  wins!
-Player  1  wins!
-Player  2  wins!
-Player  1  wins!
-Player  1  wins!
-Player  1  wins!
-Player  1  wins!
-Player  1  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  1  wins!
-Player  1  wins!
-Player  1  wins!
-Player  1  wins!
-Player  1  wins!
-Tie!
-Player  2  wins!
-Player  1  wins!
-Player  1  wins!
-Player  2  wins!
-Player  1  wins!
-Player  2  wins!
-Player  1  wins!
-Player  1  wins!
-Player  1  wins!
-Player  1  wins!
-Player  1  wins!
-Player  1  wins!
-Player  1  wins!
-Player  1  wins!
-Player  1  wins!
-Player  1  wins!
-Tie!
-Player  2  wins!
-Player  1  wins!
-Player  2  wins!
-Player  1  wins!
-Player  1  wins!
-Player  2  wins!
-Player  1  wins!
-Player  1  wins!
-Player  1  wins!
-Player  2  wins!
-Player  1  wins!
-Player  1  wins!
-Player  1  wins!
-Player  2  wins!
-Player  1  wins!
-Player  1  wins!
-Player  1  wins!
-Player  1  wins!
-Player  1  wins!
-Player  1  wins!
-Player  1  wins!
-Player  1  wins!
-Player  1  wins!
-Résultats (nb game = 100) :
+Mode parallï¿½le
+Rï¿½sultats (nb game = 100) :
 Nombre de victoires du joueur 1 (mcts = 200) : 71 Win rate : 71.0%
 Nombre de victoires du joueur 2 (alphabeta = 0) : 29 Win rate : 28.999999999999996%
-Mode parallèle
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  1  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  1  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  1  wins!
-Player  2  wins!
-Player  2  wins!
-Player  1  wins!
-Player  1  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  1  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  1  wins!
-Player  2  wins!
-Player  2  wins!
-Tie!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  1  wins!
-Player  2  wins!
-Player  1  wins!
-Player  2  wins!
-Player  2  wins!
-Player  1  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  1  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  1  wins!
-Player  2  wins!
-Player  2  wins!
-Tie!
-Player  2  wins!
-Player  2  wins!
-Player  1  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  1  wins!
-Player  1  wins!
-Player  2  wins!
-Player  2  wins!
-Player  1  wins!
-Player  2  wins!
-Résultats (nb game = 100) :
+Mode parallï¿½le
+Rï¿½sultats (nb game = 100) :
 Nombre de victoires du joueur 1 (mcts = 200) : 16 Win rate : 16.0%
 Nombre de victoires du joueur 2 (alphabeta = 1) : 84 Win rate : 84.0%
-Mode parallèle
-Player  2  wins!
-Player  2  wins!
-Player  1  wins!
-Player  2  wins!
-Player  2  wins!
-Player  1  wins!
-Player  1  wins!
-Player  1  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  1  wins!
-Player  1  wins!
-Player  1  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  1  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  1  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  1  wins!
-Tie!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  1  wins!
-Player  1  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  1  wins!
-Player  2  wins!
-Player  1  wins!
-Player  1  wins!
-Player  1  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  1  wins!
-Player  2  wins!
-Player  1  wins!
-Player  2  wins!
-Player  1  wins!
-Player  2  wins!
-Player  2  wins!
-Player  1  wins!
-Player  2  wins!
-Player  1  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  1  wins!
-Player  2  wins!
-Player  2  wins!
-Player  1  wins!
-Player  1  wins!
-Player  1  wins!
-Player  1  wins!
-Player  1  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  1  wins!
-Player  1  wins!
-Player  1  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  1  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  1  wins!
-Player  2  wins!
-Résultats (nb game = 100) :
+Mode parallï¿½le
+Rï¿½sultats (nb game = 100) :
 Nombre de victoires du joueur 1 (mcts = 200) : 32 Win rate : 32.0%
 Nombre de victoires du joueur 2 (alphabeta = 2) : 68 Win rate : 68.0%
-Mode parallèle
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Tie!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  1  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  1  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  1  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  1  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  1  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  1  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Résultats (nb game = 100) :
+Mode parallï¿½le
+Rï¿½sultats (nb game = 100) :
 Nombre de victoires du joueur 1 (mcts = 200) : 6 Win rate : 6.0%
 Nombre de victoires du joueur 2 (alphabeta = 3) : 94 Win rate : 94.0%
-Mode parallèle
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  1  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  1  wins!
-Player  1  wins!
-Player  2  wins!
-Player  2  wins!
-Résultats (nb game = 100) :
+Mode parallï¿½le
+Rï¿½sultats (nb game = 100) :
 Nombre de victoires du joueur 1 (mcts = 200) : 3 Win rate : 3.0%
 Nombre de victoires du joueur 2 (alphabeta = 4) : 97 Win rate : 97.0%
-Mode parallèle
-Player  1  wins!
-Player  1  wins!
-Player  1  wins!
-Player  1  wins!
-Player  2  wins!
-Player  2  wins!
-Player  1  wins!
-Player  1  wins!
-Player  2  wins!
-Player  1  wins!
-Player  1  wins!
-Player  1  wins!
-Player  1  wins!
-Player  1  wins!
-Player  1  wins!
-Player  1  wins!
-Player  1  wins!
-Player  1  wins!
-Player  1  wins!
-Player  2  wins!
-Player  1  wins!
-Player  1  wins!
-Player  1  wins!
-Player  1  wins!
-Tie!
-Player  1  wins!
-Player  1  wins!
-Player  2  wins!
-Player  1  wins!
-Player  1  wins!
-Player  1  wins!
-Player  2  wins!
-Player  1  wins!
-Player  2  wins!
-Player  1  wins!
-Player  2  wins!
-Player  1  wins!
-Player  1  wins!
-Player  1  wins!
-Player  1  wins!
-Player  2  wins!
-Player  2  wins!
-Player  1  wins!
-Player  1  wins!
-Player  1  wins!
-Player  1  wins!
-Player  1  wins!
-Player  1  wins!
-Player  1  wins!
-Player  1  wins!
-Player  2  wins!
-Player  1  wins!
-Player  1  wins!
-Player  1  wins!
-Player  2  wins!
-Player  1  wins!
-Player  1  wins!
-Player  1  wins!
-Player  1  wins!
-Player  2  wins!
-Player  1  wins!
-Player  2  wins!
-Player  1  wins!
-Player  1  wins!
-Player  2  wins!
-Player  1  wins!
-Player  1  wins!
-Player  2  wins!
-Player  2  wins!
-Player  1  wins!
-Player  2  wins!
-Player  1  wins!
-Player  1  wins!
-Player  1  wins!
-Player  1  wins!
-Player  1  wins!
-Player  1  wins!
-Player  2  wins!
-Player  1  wins!
-Player  2  wins!
-Player  1  wins!
-Player  2  wins!
-Player  1  wins!
-Player  2  wins!
-Player  1  wins!
-Player  2  wins!
-Player  1  wins!
-Player  1  wins!
-Player  1  wins!
-Player  1  wins!
-Player  1  wins!
-Player  1  wins!
-Player  2  wins!
-Player  1  wins!
-Player  1  wins!
-Player  2  wins!
-Player  2  wins!
-Player  1  wins!
-Player  1  wins!
-Player  2  wins!
-Résultats (nb game = 100) :
+Mode parallï¿½le
+Rï¿½sultats (nb game = 100) :
 Nombre de victoires du joueur 1 (mcts = 300) : 72 Win rate : 72.0%
 Nombre de victoires du joueur 2 (alphabeta = 0) : 28 Win rate : 28.000000000000004%
-Mode parallèle
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  1  wins!
-Tie!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  1  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  1  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  1  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  1  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  1  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  1  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  1  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  1  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  1  wins!
-Player  2  wins!
-Player  2  wins!
-Player  1  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  1  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  1  wins!
-Player  2  wins!
-Player  1  wins!
-Player  2  wins!
-Player  2  wins!
-Résultats (nb game = 100) :
+Mode parallï¿½le
+Rï¿½sultats (nb game = 100) :
 Nombre de victoires du joueur 1 (mcts = 300) : 14 Win rate : 14.000000000000002%
 Nombre de victoires du joueur 2 (alphabeta = 1) : 86 Win rate : 86.0%
-Mode parallèle
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  1  wins!
-Player  1  wins!
-Player  1  wins!
-Player  2  wins!
-Player  2  wins!
-Player  1  wins!
-Player  1  wins!
-Player  1  wins!
-Player  1  wins!
-Player  1  wins!
-Player  2  wins!
-Player  2  wins!
-Player  1  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  1  wins!
-Player  2  wins!
-Player  2  wins!
-Player  1  wins!
-Player  1  wins!
-Player  2  wins!
-Player  1  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  1  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  1  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  1  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  1  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  1  wins!
-Player  1  wins!
-Player  2  wins!
-Player  2  wins!
-Player  1  wins!
-Player  2  wins!
-Player  1  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  1  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  1  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  1  wins!
-Player  1  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  1  wins!
-Résultats (nb game = 100) :
+Mode parallï¿½le
+Rï¿½sultats (nb game = 100) :
 Nombre de victoires du joueur 1 (mcts = 300) : 26 Win rate : 26.0%
 Nombre de victoires du joueur 2 (alphabeta = 2) : 74 Win rate : 74.0%
-Mode parallèle
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Tie!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  1  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Tie!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  1  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  1  wins!
-Tie!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  1  wins!
-Player  2  wins!
-Player  2  wins!
-Player  1  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  1  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  1  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Résultats (nb game = 100) :
+Mode parallï¿½le
+Rï¿½sultats (nb game = 100) :
 Nombre de victoires du joueur 1 (mcts = 300) : 7 Win rate : 7.000000000000001%
 Nombre de victoires du joueur 2 (alphabeta = 3) : 93 Win rate : 93.0%
-Mode parallèle
-Player  2  wins!
-Player  2  wins!
-Player  1  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Tie!
-Player  2  wins!
-Player  2  wins!
-Player  1  wins!
-Player  2  wins!
-Player  2  wins!
-Player  1  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  1  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  1  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  1  wins!
-Player  2  wins!
-Player  1  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  1  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  1  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  1  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  1  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Résultats (nb game = 100) :
+Mode parallï¿½le
+Rï¿½sultats (nb game = 100) :
 Nombre de victoires du joueur 1 (mcts = 300) : 11 Win rate : 11.0%
 Nombre de victoires du joueur 2 (alphabeta = 4) : 89 Win rate : 89.0%
-Mode parallèle
-Player  1  wins!
-Player  1  wins!
-Player  1  wins!
-Player  1  wins!
-Player  2  wins!
-Player  1  wins!
-Player  1  wins!
-Player  1  wins!
-Player  1  wins!
-Player  2  wins!
-Player  1  wins!
-Player  1  wins!
-Player  1  wins!
-Player  1  wins!
-Player  1  wins!
-Player  2  wins!
-Player  1  wins!
-Player  1  wins!
-Player  1  wins!
-Player  1  wins!
-Player  2  wins!
-Player  2  wins!
-Player  1  wins!
-Player  2  wins!
-Player  1  wins!
-Player  1  wins!
-Player  1  wins!
-Player  1  wins!
-Player  1  wins!
-Player  1  wins!
-Player  1  wins!
-Player  1  wins!
-Player  1  wins!
-Player  1  wins!
-Player  1  wins!
-Player  1  wins!
-Player  1  wins!
-Player  1  wins!
-Player  1  wins!
-Player  2  wins!
-Player  1  wins!
-Player  1  wins!
-Player  1  wins!
-Player  2  wins!
-Player  1  wins!
-Player  1  wins!
-Player  1  wins!
-Player  1  wins!
-Player  1  wins!
-Player  1  wins!
-Player  2  wins!
-Player  2  wins!
-Player  1  wins!
-Player  1  wins!
-Player  1  wins!
-Player  1  wins!
-Player  1  wins!
-Player  1  wins!
-Player  1  wins!
-Player  1  wins!
-Player  2  wins!
-Player  1  wins!
-Player  2  wins!
-Player  1  wins!
-Player  1  wins!
-Player  1  wins!
-Player  1  wins!
-Player  2  wins!
-Player  2  wins!
-Player  1  wins!
-Player  1  wins!
-Player  1  wins!
-Player  1  wins!
-Player  1  wins!
-Player  1  wins!
-Player  1  wins!
-Player  1  wins!
-Player  1  wins!
-Player  2  wins!
-Player  1  wins!
-Player  2  wins!
-Player  1  wins!
-Player  1  wins!
-Player  1  wins!
-Player  1  wins!
-Player  1  wins!
-Player  2  wins!
-Player  1  wins!
-Player  1  wins!
-Player  1  wins!
-Player  2  wins!
-Player  1  wins!
-Player  2  wins!
-Player  1  wins!
-Player  1  wins!
-Player  2  wins!
-Player  1  wins!
-Player  1  wins!
-Player  2  wins!
-Player  2  wins!
-Résultats (nb game = 100) :
+Mode parallï¿½le
+Rï¿½sultats (nb game = 100) :
 Nombre de victoires du joueur 1 (mcts = 400) : 78 Win rate : 78.0%
 Nombre de victoires du joueur 2 (alphabeta = 0) : 22 Win rate : 22.0%
-Mode parallèle
-Player  1  wins!
-Player  1  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  1  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  1  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  1  wins!
-Player  2  wins!
-Player  2  wins!
-Player  1  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  1  wins!
-Player  2  wins!
-Player  1  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  1  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  1  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  1  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  1  wins!
-Player  2  wins!
-Player  1  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  1  wins!
-Player  2  wins!
-Player  1  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  1  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  1  wins!
-Player  1  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Résultats (nb game = 100) :
+Mode parallï¿½le
+Rï¿½sultats (nb game = 100) :
 Nombre de victoires du joueur 1 (mcts = 400) : 18 Win rate : 18.0%
 Nombre de victoires du joueur 2 (alphabeta = 1) : 82 Win rate : 82.0%
-Mode parallèle
-Player  1  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  1  wins!
-Player  2  wins!
-Player  1  wins!
-Player  1  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  1  wins!
-Player  2  wins!
-Player  2  wins!
-Player  1  wins!
-Player  2  wins!
-Player  1  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  1  wins!
-Player  1  wins!
-Player  2  wins!
-Player  2  wins!
-Player  1  wins!
-Player  2  wins!
-Player  2  wins!
-Player  1  wins!
-Player  1  wins!
-Player  2  wins!
-Player  1  wins!
-Player  2  wins!
-Player  1  wins!
-Player  2  wins!
-Player  1  wins!
-Player  1  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  1  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  1  wins!
-Player  2  wins!
-Player  2  wins!
-Player  1  wins!
-Player  1  wins!
-Player  2  wins!
-Player  1  wins!
-Player  1  wins!
-Player  2  wins!
-Player  1  wins!
-Player  2  wins!
-Player  1  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  1  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Tie!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  1  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  1  wins!
-Tie!
-Résultats (nb game = 100) :
+Mode parallï¿½le
+Rï¿½sultats (nb game = 100) :
 Nombre de victoires du joueur 1 (mcts = 400) : 27 Win rate : 27.0%
 Nombre de victoires du joueur 2 (alphabeta = 2) : 73 Win rate : 73.0%
-Mode parallèle
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Tie!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  1  wins!
-Player  2  wins!
-Player  2  wins!
-Player  1  wins!
-Player  2  wins!
-Player  2  wins!
-Player  1  wins!
-Player  2  wins!
-Tie!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  1  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  1  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  1  wins!
-Player  1  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  1  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  1  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Tie!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  1  wins!
-Player  1  wins!
-Player  1  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Résultats (nb game = 100) :
+Mode parallï¿½le
+Rï¿½sultats (nb game = 100) :
 Nombre de victoires du joueur 1 (mcts = 400) : 12 Win rate : 12.0%
 Nombre de victoires du joueur 2 (alphabeta = 3) : 88 Win rate : 88.0%
-Mode parallèle
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  1  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  1  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Tie!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  1  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  1  wins!
-Player  1  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  1  wins!
-Player  1  wins!
-Player  2  wins!
-Player  1  wins!
-Player  2  wins!
-Player  2  wins!
-Player  1  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  1  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  1  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  1  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  1  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  2  wins!
-Player  1  wins!
-Player  2  wins!
-Résultats (nb game = 100) :
+Mode parallï¿½le
+Rï¿½sultats (nb game = 100) :
 Nombre de victoires du joueur 1 (mcts = 400) : 14 Win rate : 14.000000000000002%
 Nombre de victoires du joueur 2 (alphabeta = 4) : 86 Win rate : 86.0%
